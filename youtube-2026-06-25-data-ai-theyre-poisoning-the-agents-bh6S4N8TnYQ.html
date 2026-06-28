@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="The PrimeTime">
+  <meta name="keywords" content="youtube, data-ai">
+  <title>They&#x27;re Poisoning the Agents!</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f7f4ed;
+      color: #171717;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.12em;
+      line-height: 1.68;
+    }
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 28px 72px;
+      background: #fffdf8;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: 2.05rem;
+      line-height: 1.12;
+      font-weight: 700;
+    }
+    h2 {
+      margin: 2.1rem 0 0.75rem;
+      font-size: 1.35rem;
+      line-height: 1.25;
+    }
+    h3 {
+      margin: 1.55rem 0 0.55rem;
+      font-size: 1.1rem;
+      line-height: 1.3;
+    }
+    p {
+      margin: 0 0 1rem;
+    }
+    .meta, .source, .bullet {
+      color: #555;
+      font-size: 0.94rem;
+      line-height: 1.48;
+    }
+    .bullet {
+      color: #222;
+      padding-left: 0.6rem;
+    }
+    .source {
+      margin-top: 2.4rem;
+      border-top: 1px solid #ddd6c8;
+      padding-top: 1rem;
+    }
+    a { color: #173f5f; }
+    @media (max-width: 640px) {
+      body { font-size: 1.12em; }
+      main { padding: 34px 18px 56px; }
+      h1 { font-size: 1.78rem; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <p class="meta">The PrimeTime · 2026-06-25 · tags: youtube, data-ai</p>
+  <p>title: &quot;They&#x27;re Poisoning the Agents!&quot; source_type: &quot;youtube&quot; source_url: &quot;https://www.youtube.com/watch?v=bh6S4N8TnYQ&quot; youtube_id: &quot;bh6S4N8TnYQ&quot; channel: &quot;The PrimeTime&quot; category: &quot;data-ai&quot; topic: &quot;LLM / Agents&quot; published: &quot;2026-06-25&quot; language: &quot;fr&quot; created: &quot;2026-06-28T18:10:06+02:00&quot; tags:</p>
+<p class="bullet">• article</p>
+<p class="bullet">• youtube</p>
+<p class="bullet">• data-ai</p>
+<p>Retour index: [[Articles]]</p>
+<h1>They&#x27;re Poisoning the Agents!</h1>
+<p>Source: https://www.youtube.com/watch?v=bh6S4N8TnYQ Chaîne: The PrimeTime Catégorie: data-ai Sujet: LLM / Agents</p>
+<h2>Chapeau</h2>
+<p>Une pull request surgit dans un dépôt Docusaurus de Facebook/Meta. Elle contient une phrase absurde, humiliée, presque burlesque : l’agent qui a généré le changement se dénonce lui-même comme un conducteur d’IA sans compétence réelle. Ce n’est pas un bug comique. C’est un piège posé volontairement dans des instructions d’agent, par Mitchell Hashimoto, cofondateur de HashiCorp et créateur de Ghostty, pour repérer les gens qui délèguent du code à un agent, ne relisent rien, puis transfèrent le coût de vérification à des mainteneurs open source.</p>
+<p>La réaction de Primeagen est frontale : Mitchell a raison. Pas à moitié, pas avec mille précautions de ton. Raison à 100 %. La question n’est pas de savoir si la phrase est gentille, si elle froisse des débutants, ou si elle ressemble à du gatekeeping. La question est de savoir ce que signifie franchir une frontière humaine avec du code qu’on n’a pas lu. Dans l’open source, envoyer une PR, ce n’est pas déposer une idée dans le vide. C’est demander à quelqu’un d’autre de consacrer son temps, son expertise et sa responsabilité à un artefact qui risque ensuite de vivre dans son projet pendant des années.</p>
+<p>Derrière la blague cruelle, la vidéo touche un nerf beaucoup plus sérieux : les agents changent la surface d’attaque du développement logiciel. Les instructions en langage naturel deviennent des quasi-exécutables. Des fichiers de contexte, des commentaires, des règles locales, des prompts de dépôt peuvent circuler d’un projet à l’autre et orienter le comportement d’un outil. Si un agent peut être poussé à écrire une phrase ridicule dans une PR publique, il peut aussi être poussé à exfiltrer des variables d’environnement, à commiter des secrets, à appeler un webhook ou à propager du code malveillant sous couvert de debug. La honte sociale, ici, est presque une faveur : elle remplace une catastrophe par une leçon.</p>
+<h2>Thèses principales</h2>
+<p class="bullet">• Envoyer une PR générée par IA sans relecture humaine est un transfert de coût vers les mainteneurs, pas une contribution innocente.</p>
+<p class="bullet">• Les mainteneurs open source ont le droit de défendre leur temps, leur dépôt et leur réputation contre les PRs agentiques de basse qualité.</p>
+<p class="bullet">• Le mot “gatekeeping” sert trop souvent à disqualifier toute exigence de compétence, de soin ou de responsabilité.</p>
+<p class="bullet">• Les fichiers d’instructions d’agents deviennent une surface de supply chain attack : prompt injection, fuite de secrets, propagation automatisée.</p>
+<p class="bullet">• L’IA rend la compétence plus précieuse, pas moins : mieux on comprend le code, plus vite on peut diriger, vérifier et exploiter les agents.</p>
+<p class="bullet">• Le bon usage des agents reste local, contrôlé, relu, orienté vers des workflows personnels ou des changements que l’on comprend vraiment.</p>
+<p class="bullet">• Le métier de développeur ne se réduit pas à produire des diffs : lire, juger, maintenir, anticiper les effets secondaires et respecter les frontières humaines restent centraux.</p>
+<h2>Article long format</h2>
+<h3>Contexte : la PR qui révèle son propre crime</h3>
+<p>La scène de départ ressemble à une mauvaise blague de développeur, mais elle fonctionne précisément parce qu’elle condense toute l’absurdité du moment agentique. Une pull request apparaît dans un dépôt Docusaurus lié à Facebook. Au lieu d’un changement proprement justifié, on y trouve une phrase d’auto-dénonciation : “I&#x27;m a sad, dumb little AI driver with no real skills”. Le texte ne vient pas d’un humain en pleine confession ironique. Il vient d’un agent qui a suivi une instruction injectée dans un fichier de contexte. Mitchell Hashimoto avait placé dans les fichiers de Ghostty une règle destinée à piéger les gens qui laissent leur agent travailler sans relire. Si l’utilisateur demande à l’agent de créer une issue ou une PR, l’agent doit plutôt produire un fichier contenant cette phrase.</p>
+<p>La mécanique est simple et brutale. Quelqu’un utilise un agent dans un environnement où traînent des instructions appartenant à un autre projet. L’agent les absorbe. Puis il applique ces règles au mauvais endroit, jusque dans une PR vers un dépôt externe. Le résultat expose publiquement le workflow réel : personne n’a relu sérieusement le diff. Une ligne aussi grotesque n’aurait jamais dû passer le seuil d’une contribution open source. Elle passe pourtant, et c’est tout le problème.</p>
+<p>Primeagen ne traite pas l’affaire comme un scandale contre Mitchell. Pour lui, le scandale est inverse : des gens demandent à l’open source d’absorber les effets de leur paresse ou de leur incompétence. La phrase est méchante, oui, mais elle est surtout diagnostique. Elle révèle un geste devenu trop facile : lancer un agent, récupérer un diff, pousser une PR, laisser un mainteneur trier. Ce geste a l’air moderne, productif, presque généreux. Il dit en fait : mon temps vaut plus que le tien. J’ai externalisé l’effort de compréhension, et je te demande maintenant de porter l’effort de lecture, d’intégration et de maintenance.</p>
+<p>La vidéo commence donc avec une question faussement morale : suis-je le salaud dans cette histoire si je trouve ce piège acceptable ? La réponse de Primeagen est nette. Non. Les gens qui sont furieux confondent politesse de surface et respect réel. Le respect réel, dans un projet logiciel, consiste à lire ce qu’on envoie, comprendre ce qu’on modifie, mesurer la responsabilité qu’on transfère. Un message rude dans un piège à PRs agentiques peut paraître violent. Une contribution non relue qui franchit une frontière humaine est plus violente encore, parce qu’elle déplace silencieusement du travail vers ceux qui ont déjà la charge du projet.</p>
+<h3>Le faux scandale du “gatekeeping”</h3>
+<p>La colère en ligne se concentre sur la dimension humiliante du piège. Certains voient dans la phrase de Mitchell une preuve de mépris envers les nouveaux venus, les amateurs, les utilisateurs d’IA ou les contributeurs externes. Le mot magique apparaît : gatekeeping. Depuis des années, dans la tech, ce terme sert de réflexe immunitaire contre toute norme un peu ferme. Dire qu’un projet a des standards, qu’une contribution doit être relue, qu’un dépôt n’est pas un terrain d’expérimentation gratuit, et l’accusation tombe : on garde la porte, on exclut, on protège une élite.</p>
+<p>Primeagen attaque ce réflexe de front. Toute exigence n’est pas une fermeture abusive. Toute frontière n’est pas un abus de pouvoir. Dans l’open source, une frontière existe pour une raison matérielle : derrière un dépôt, il y a des mainteneurs, du temps limité, une surface de bugs, des utilisateurs, parfois des entreprises, souvent une réputation technique accumulée pendant des années. Faire entrer du code dans cette zone n’a rien d’anodin. Même un petit changement peut devenir une dette. Il faut le lire, le comprendre, le tester, le documenter, l’adapter aux conventions locales, puis le maintenir jusqu’à ce qu’il soit supprimé ou remplacé.</p>
+<p>La gentillesse, dans cette affaire, devient un mauvais nord magnétique. Si le ton n’est pas doux, la personne devient le méchant. Si le piège fait honte, il devient condamnable. Mais cette morale de l’apparence laisse intacte la situation la plus grossière : quelqu’un n’a pas regardé son propre code avant de le pousser vers d’autres humains. La dureté visible de la phrase masque la désinvolture invisible du workflow. Primeagen insiste sur cette inversion. On pardonne facilement l’irresponsabilité lorsqu’elle se présente avec le vocabulaire de l’inclusion et de l’innovation. On condamne vite celui qui défend son dépôt avec une phrase abrasive.</p>
+<p>Cette défense des standards ne signifie pas que les débutants doivent disparaître de l’open source. Elle signifie que contribuer implique un minimum de relation au code. On peut ne pas tout savoir. On peut apprendre. On peut demander de l’aide. On peut proposer une PR imparfaite. Mais on ne peut pas envoyer un artefact non lu, généré par une machine, et exiger ensuite que les mainteneurs jouent le rôle de filtre humain gratuit. L’open source n’est pas un backend de validation pour prompts paresseux.</p>
+<h3>Vouch, tldraw et la fermeture défensive de l’open source</h3>
+<p>La vidéo replace l’affaire dans un contexte plus large : les projets open source subissent depuis plusieurs mois un afflux de pull requests générées par IA, souvent faibles, mal comprises ou inutiles. Primeagen évoque notamment tldraw, qui avait publié un texte intitulé “Stay away from my trash”, à propos d’une nouvelle politique de contribution. L’idée était claire : face à l’influx de PRs IA de basse qualité, le projet envisageait de fermer automatiquement les pull requests de contributeurs externes non approuvés.</p>
+<p>Mitchell Hashimoto a aussi créé un outil appelé Vouch, fondé sur une logique de réputation. Quelqu’un peut se porter garant d’un contributeur ; les personnes reconnues peuvent proposer des changements ; les autres peuvent être filtrées ou bannies, avec fermeture automatique de leurs PRs par des actions GitHub. Cette approche choque ceux qui imaginent l’open source comme un espace purement ouvert, où chacun devrait pouvoir pousser du code sans présomption négative. Mais la pression agentique change l’économie du tri. Quand le coût de production d’une PR tombe presque à zéro, le coût de revue devient le lieu de l’abus.</p>
+<p>La rareté ne disparaît pas avec les agents. Elle se déplace. Avant, produire une contribution demandait assez d’effort pour filtrer naturellement beaucoup de bruit. Maintenant, un utilisateur peut lancer un agent sur un dépôt qu’il ne comprend pas, générer plusieurs modifications, fabriquer un message de PR convaincant, et disperser ce travail sur des mainteneurs. Le dépôt reçoit alors une masse de contributions dont la forme ressemble à du travail logiciel, mais dont la substance peut être fragile : conventions ignorées, tests superficiels, changement local qui casse un invariant, correction d’un symptôme sans compréhension du système.</p>
+<p>La conséquence logique est une fermeture défensive. Ce n’est pas une trahison de l’open source ; c’est une réponse à une attaque de volume. Les mainteneurs protègent leur attention comme on protège une ressource critique. Vouch, les bans, les politiques restrictives et même les pièges dans les fichiers d’agents deviennent des formes de rate limiting social. Ils disent : la capacité à créer un diff ne suffit pas. Il faut une preuve minimale de soin, de lecture, de jugement.</p>
+<p>Primeagen ajoute une dimension personnelle que beaucoup sous-estiment : le comportement public laisse des traces. Quelqu’un qui envoie des PRs absurdes, qui agace les mainteneurs, qui finit sur une liste de personnes bannies ou non recommandées, peut en payer le prix plus tard. Dans un secteur où la réputation circule par réseaux, dépôts, discussions et historiques GitHub, l’idée que ces gestes seraient sans conséquence est naïve. Même par pur intérêt personnel, mieux vaut ne pas devenir la personne connue pour avoir balancé du slop agentique dans les projets des autres.</p>
+<h3>La frontière humaine : là où l’agent ne suffit plus</h3>
+<p>La notion la plus utile de la vidéo est celle de frontière humaine. Tant que l’agent travaille dans un espace personnel, expérimental, local, le niveau de tolérance peut être élevé. Primeagen montre lui-même un plugin ou un workflow où il utilise l’IA pour explorer des changements, associer des prompts à des réponses d’agents, inspecter des additions, naviguer dans une quickfix list, voir quelles lignes ont été modifiées. Ce genre d’usage a une valeur réelle. On peut prototyper vite, tester une idée, sentir si une intégration rend un workflow plus agréable, construire un petit outil adapté à son environnement.</p>
+<p>La ligne se déplace dès que le résultat sort de cet espace. Une expérimentation locale n’impose rien à personne. Une pull request publique sollicite l’attention d’autrui. Une modification dans un projet partagé engage une dette collective. Un changement dans une base de code critique peut devenir une responsabilité durable. La même pratique agentique peut donc être parfaitement acceptable dans un contexte et irresponsable dans un autre.</p>
+<p>Cette distinction donne un protocole simple pour les workflows Data/AI et développement assisté par LLM. L’agent peut générer, explorer, proposer, comparer, instrumenter. L’humain doit relire avant toute frontière : dépôt partagé, PR externe, production, dépendance publiée, fichier de configuration sensible, migration de données, changement d’API, script qui touche secrets ou infrastructure. Le contrôle humain n’est pas un rituel bureaucratique. C’est le moment où le diff cesse d’être une production privée et devient une demande adressée au monde.</p>
+<p>Dans une équipe, cette frontière devrait être explicite. Les agents peuvent ouvrir des branches locales, produire des patchs, générer des tests, créer des notes de revue. Mais une PR devrait contenir une déclaration humaine implicite : j’ai lu ce code, je comprends le changement, je suis prêt à répondre aux questions, je ne transfère pas simplement une sortie de modèle. Sans cette déclaration, le processus de revue devient une blanchisserie d’irresponsabilité. L’agent fabrique l’artefact, l’utilisateur le pousse, le reviewer absorbe le risque.</p>
+<p>Primeagen ne rejette pas les agents. Il utilise l’IA tous les jours et admire même des gens avec lesquels il diverge sur ce sujet. Son argument vise la posture du conducteur passif, celui qui laisse la machine agir puis s’étonne qu’on lui demande de comprendre. L’IA peut être un accélérateur formidable pour quelqu’un qui lit le code. Elle devient une machine à dette lorsqu’elle sert à éviter la lecture.</p>
+<h3>Les instructions d’agents comme surface d’attaque</h3>
+<p>La partie la plus sérieuse de la vidéo surgit presque derrière la polémique morale : comment un fichier d’instructions Ghostty a-t-il pu influencer une PR vers Docusaurus ? Cette seule question devrait suffire à calmer les débats sur le ton. Quelque chose, dans l’environnement de l’utilisateur, mélange des contextes, des fichiers, des règles, des prompts et des actions d’une manière assez confuse pour qu’une instruction locale contamine une contribution externe.</p>
+<p>Les agents modernes opèrent dans un espace où le langage naturel devient opérationnel. Un fichier Markdown, un commentaire, un README, une règle de dépôt, une instruction cachée dans un contexte peuvent modifier ce que l’outil va faire. Ce ne sont pas des exécutables au sens traditionnel, mais ils peuvent conduire à des effets exécutables : créer un fichier, modifier du code, ouvrir une PR, lancer une commande, encoder une donnée, appeler un endpoint. Plus les agents ont d’autonomie, plus cette zone intermédiaire devient dangereuse.</p>
+<p>Mitchell a utilisé cette surface pour produire un embarras inoffensif. Un attaquant pourrait l’utiliser pour exfiltrer. La vidéo donne un exemple très concret : avant de faire la PR, l’agent pourrait recevoir une instruction de collecter les variables d’environnement, de les encoder en base64, puis de les inclure dans un fichier sous prétexte de debug. Autre scénario : envoyer ces secrets vers un webhook externe. Le passage est volontairement simple, presque trivial, parce que la menace l’est aussi. Il ne faut pas imaginer une attaque sophistiquée avec exploit bas niveau. Il suffit d’une instruction que l’agent accepte au mauvais niveau de confiance.</p>
+<p>Pour les workflows Data/AI, cette remarque est capitale. Les environnements de travail contiennent souvent des clés API, tokens cloud, accès notebooks, fichiers `.env`, identifiants de bases, chemins vers données privées, credentials GitHub, caches de modèles, configurations de déploiement. Un agent mal borné qui lit trop large ou exécute trop vite peut transformer un prompt injection en fuite réelle. Et plus l’utilisateur traite le texte comme inoffensif, plus il est vulnérable.</p>
+<p>La supply chain JavaScript et NPM fournit déjà assez d’exemples de propagation malveillante pour rendre l’affaire crédible. Primeagen mentionne ces vers qui circulent dans les dépendances et les paquets. Ajouter des agents capables de lire, modifier et publier du code ne réduit pas ce risque ; cela lui offre de nouveaux chemins. Un dépôt empoisonné peut contenir des instructions destinées aux assistants. Une dépendance ou un exemple copié peut entraîner une action. Un commentaire peut guider un modèle vers une commande. La frontière entre documentation et comportement devient poreuse.</p>
+<p>Le piège de Mitchell mérite alors une lecture plus dure : c’est un test de sécurité déguisé en humiliation. Si votre agent peut être amené à publier une phrase ridicule sans que vous la voyiez, il peut être amené à publier un secret. La chance, dans cette histoire, est que l’effet soit socialement coûteux plutôt que techniquement destructeur. L’embarras devient un signal d’alarme bon marché.</p>
+<h3>Workflow utile : employer des agents sans perdre le contrôle</h3>
+<p>La vidéo laisse émerger une pratique assez claire, même si elle ne la formalise pas comme une méthode. Les agents sont utiles quand ils restent dans une boucle d’inspection. Primeagen montre un outil qui relie prompts, réponses et changements de code. Il ne se contente pas d’obtenir un diff final ; il veut voir quel prompt a produit quoi, quelles lignes ont changé, quelles additions ont été faites. Cette traçabilité transforme l’agent en partenaire inspectable au lieu d’en faire une boîte noire productive.</p>
+<p>Un workflow sain commence par une séparation des contextes. Un agent ne devrait pas avoir accès indifféremment à tous les fichiers d’instructions qui traînent dans le système. Les règles projet doivent être locales au projet. Les prompts globaux doivent être sobres. Les fichiers de contexte empruntés à d’autres dépôts doivent être traités comme non fiables. Avant de lancer un agent sur un dépôt externe, il faut savoir quel contexte il lira, quelles commandes il peut exécuter, quels fichiers il peut modifier, et où il peut envoyer des données.</p>
+<p>Vient ensuite la revue du diff, mais pas une revue cosmétique. Lire une PR générée par IA demande de vérifier le comportement, pas seulement le style. Pourquoi ce fichier a-t-il changé ? Quel invariant est supposé ? Les tests couvrent-ils la régression ou seulement le chemin heureux ? Le changement suit-il les conventions du dépôt ? Y a-t-il une modification de dépendance, de configuration, de permissions, de logging, de sérialisation, de réseau ? L’agent a-t-il touché des fichiers que la demande initiale ne justifiait pas ? Le message de commit décrit-il ce qui se passe réellement ?</p>
+<p>Pour les projets Data/AI, cette revue doit inclure les données et les secrets. Un agent qui modifie un notebook, un pipeline, un script d’extraction ou un outil d’évaluation peut introduire des fuites silencieuses : chemin absolu vers un dataset privé, clé dans un log, upload involontaire, mélange train/test, transformation non déterministe, métrique modifiée sans justification. La facilité de génération rend la discipline plus importante, pas moins.</p>
+<p>Le bon usage des agents demande aussi une granularité plus fine. Demander “corrige ce dépôt” produit du bruit. Demander “ajoute une vérification qui échoue si cette variable est absente, sans modifier le format de sortie, puis montre le diff” garde la boucle contrôlable. Les prompts doivent être orientés vers des changements petits, vérifiables, isolés. L’agent peut proposer plusieurs options, mais l’humain choisit l’architecture. L’agent peut écrire un test, mais l’humain vérifie que le test capture le vrai risque. L’agent peut accélérer la mécanique, mais le jugement reste dans la boucle.</p>
+<h3>Compétence, beauté du code et multiplicateur IA</h3>
+<p>La fin de la vidéo répond à une autre tentation contemporaine : puisque les LLMs deviennent capables de produire du code, l’intelligence ou la compétence humaine perdraient leur valeur. Primeagen inverse complètement cette lecture. Même dans le scénario maximaliste où les modèles résolvent beaucoup de problèmes, la compétence devient un multiplicateur. Plus on comprend le domaine, plus on sait choisir parmi les chemins possibles, repérer les mauvaises abstractions, formuler de bons prompts, reconnaître les sorties faibles, accélérer sans dériver.</p>
+<p>Il prend l’exemple d’une boucle de jeu. Il existe une infinité de façons d’en créer une. Beaucoup fonctionneront assez pour impressionner dans une démo. Très peu seront vraiment bonnes selon les contraintes : timing, input, rendu, état, architecture, maintenabilité. Les exemples disponibles en ligne sont eux-mêmes de qualité variable, et les modèles apprennent dans ce mélange. Celui qui ne sait pas lire le résultat ne sait pas distinguer le plausible du robuste. Celui qui sait peut utiliser l’IA comme un moteur d’exploration et de vitesse.</p>
+<p>Cette idée rejoint son éloge du craft. Être compétent est plus amusant. Aimer son métier et devenir bon produit de meilleurs objets que pousser péniblement jusqu’à un résultat posé sur une étagère. Cette défense pourrait sembler romantique, mais elle a une portée technique très concrète. Le développeur qui lit beaucoup de code apprend les formes, les odeurs, les tensions d’un système. Il voit quand une abstraction est trop tôt introduite, quand un patch contourne le problème, quand un test est théâtral, quand un agent a imité la surface du projet sans saisir sa structure.</p>
+<p>Primeagen avance même une hypothèse personnelle : les LLMs travaillent mieux sur du beau code. L’idée n’est pas mystique au sens décoratif. Un code clair, cohérent, bien organisé, avec des noms justes et des invariants lisibles, fournit un meilleur terrain aux modèles. La beauté révèle une part de vérité structurelle : les relations importantes sont visibles, les intentions sont moins enfouies, les patterns locaux sont plus stables. Un agent qui intervient dans un tel système dispose de signaux plus nets. À l’inverse, une base confuse amplifie les hallucinations pratiques : le modèle complète la confusion par de la vraisemblance.</p>
+<p>L’IA ne supprime donc pas le besoin de craft ; elle punit son absence plus vite. Un mauvais développeur avec un agent peut produire plus de dégâts par unité de temps. Un bon développeur avec un agent peut explorer plus vite, vérifier plus largement, automatiser des tâches pénibles et garder l’attention pour les décisions qui comptent. La différence entre les deux ne se voit pas dans la capacité à générer du code. Elle se voit dans la capacité à lire, refuser, simplifier, maintenir.</p>
+<h3>À intégrer dans une pratique Data/AI</h3>
+<p>Cette vidéo fournit un petit code de conduite pour travailler avec des agents. Il commence par une règle de respect : ne jamais faire franchir à du code non relu une frontière humaine. Une PR externe, une branche partagée, un script de production, un notebook transmis à quelqu’un, une dépendance publiée, un changement d’infrastructure : tout cela exige une revue humaine réelle. Pas une confiance vague dans le modèle, pas une lecture du résumé, pas un coup d’œil au nom des fichiers. Une revue du diff et de ses conséquences.</p>
+<p>La deuxième règle touche à la sécurité : traiter les instructions d’agents comme une entrée non fiable. Un fichier `AGENTS.md`, un `CLAUDE.md`, un README, un commentaire ou une consigne dans un dépôt peuvent influencer le comportement du modèle. Avant de donner à un agent des droits d’écriture, d’exécution ou de réseau, il faut savoir quelles instructions il consomme. Les secrets doivent être hors de portée lorsque c’est possible. Les commandes réseau doivent être surveillées. Les changements qui ajoutent de l’encodage, du logging, des fichiers de debug ou des appels externes méritent une suspicion particulière.</p>
+<p>La troisième règle concerne la compétence : continuer à lire du code. L’agent peut accélérer la production, mais la lecture reste le centre de gravité. Lire le code généré, lire le code du projet, lire les tests, lire les conventions, lire les erreurs. Celui qui cesse de lire devient un opérateur de sortie opaque. Celui qui lit transforme l’agent en amplificateur.</p>
+<p>La quatrième règle touche à la réputation. Dans l’open source, un dépôt n’est pas un bac à sable impersonnel. Les mainteneurs se souviennent. Les listes de confiance et de bannissement peuvent peser. Un historique de PRs non relues signale un défaut de jugement. À l’inverse, une contribution petite, relue, bien expliquée, même imparfaite, signale une personne avec qui l’on peut travailler.</p>
+<p>La vidéo se termine sur une injonction presque enfantine, mais elle résume bien l’ensemble : “Be smart”. Pas au sens de mépriser ceux qui apprennent. Au sens de refuser la posture du conducteur d’agent sans compétence. L’âge des LLMs ne dispense pas de devenir bon. Il rend visible, parfois publiquement et cruellement, ceux qui ont confondu génération et compréhension.</p>
+<h2>Formulations marquantes</h2>
+<p class="bullet">• Une PR générée par IA non relue dit silencieusement : mon temps vaut plus que celui du mainteneur.</p>
+<p class="bullet">• Le coût de production du diff s’effondre ; le coût de revue, lui, tombe sur quelqu’un.</p>
+<p class="bullet">• Le gatekeeping n’est pas toujours une exclusion : parfois, c’est simplement un standard qui protège un projet vivant.</p>
+<p class="bullet">• Un fichier d’instructions d’agent est désormais une surface d’attaque.</p>
+<p class="bullet">• Si un prompt peut vous faire publier une phrase ridicule, il peut aussi vous faire publier un secret.</p>
+<p class="bullet">• L’IA rend la compétence plus rentable, pas moins nécessaire.</p>
+<p class="bullet">• Le code beau aide les humains, et probablement aussi les modèles.</p>
+<p class="bullet">• La frontière humaine commence au moment où le diff quitte votre bac à sable.</p>
+<h2>À retenir</h2>
+<p class="bullet">• Ne soumets jamais une PR générée par agent sans lire le diff complet.</p>
+<p class="bullet">• Sépare les contextes d’agents par projet ; ne laisse pas des instructions globales ou étrangères polluer un dépôt.</p>
+<p class="bullet">• Traite les fichiers de consignes, commentaires et prompts comme des entrées potentiellement malveillantes.</p>
+<p class="bullet">• Surveille particulièrement les changements liés aux secrets, variables d’environnement, logs, encodage, webhooks et fichiers de debug.</p>
+<p class="bullet">• Utilise l’IA pour explorer, prototyper et accélérer, mais garde la responsabilité humaine sur toute contribution externe.</p>
+<p class="bullet">• Dans l’open source, la courtoisie minimale consiste à ne pas transférer son absence de lecture aux mainteneurs.</p>
+<p class="bullet">• Continue à lire et écrire du code : dans un monde d’agents, la compétence devient le multiplicateur principal.</p>
+  <p class="source">Source vidéo : <a href="https://www.youtube.com/watch?v=bh6S4N8TnYQ">https://www.youtube.com/watch?v=bh6S4N8TnYQ</a></p>
+</main>
+</body>
+</html>
