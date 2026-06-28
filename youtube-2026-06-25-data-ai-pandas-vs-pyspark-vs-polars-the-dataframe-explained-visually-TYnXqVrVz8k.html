@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Data with Baraa">
+  <meta name="keywords" content="youtube, data-ai">
+  <title>Pandas vs PySpark vs Polars: The DataFrame Explained Visually</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f7f4ed;
+      color: #171717;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.12em;
+      line-height: 1.68;
+    }
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 28px 72px;
+      background: #fffdf8;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: 2.05rem;
+      line-height: 1.12;
+      font-weight: 700;
+    }
+    h2 {
+      margin: 2.1rem 0 0.75rem;
+      font-size: 1.35rem;
+      line-height: 1.25;
+    }
+    h3 {
+      margin: 1.55rem 0 0.55rem;
+      font-size: 1.1rem;
+      line-height: 1.3;
+    }
+    p {
+      margin: 0 0 1rem;
+    }
+    .meta, .source, .bullet {
+      color: #555;
+      font-size: 0.94rem;
+      line-height: 1.48;
+    }
+    .bullet {
+      color: #222;
+      padding-left: 0.6rem;
+    }
+    .source {
+      margin-top: 2.4rem;
+      border-top: 1px solid #ddd6c8;
+      padding-top: 1rem;
+    }
+    a { color: #173f5f; }
+    @media (max-width: 640px) {
+      body { font-size: 1.12em; }
+      main { padding: 34px 18px 56px; }
+      h1 { font-size: 1.78rem; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <p class="meta">Data with Baraa · 2026-06-25 · tags: youtube, data-ai</p>
+  <p>title: &quot;Pandas vs PySpark vs Polars: The DataFrame Explained Visually&quot; source_type: &quot;youtube&quot; source_url: &quot;https://www.youtube.com/watch?v=TYnXqVrVz8k&quot; youtube_id: &quot;TYnXqVrVz8k&quot; channel: &quot;Data with Baraa&quot; category: &quot;data-ai&quot; topic: &quot;Data Engineering&quot; published: &quot;2026-06-25&quot; language: &quot;fr&quot; created: &quot;2026-06-28T17:58:07+02:00&quot; tags:</p>
+<p class="bullet">• article</p>
+<p class="bullet">• youtube</p>
+<p class="bullet">• data-ai</p>
+<p>Retour index: [[Articles]]</p>
+<h1>Pandas vs PySpark vs Polars: The DataFrame Explained Visually</h1>
+<p>Source: https://www.youtube.com/watch?v=TYnXqVrVz8k Chaîne: Data with Baraa Catégorie: data-ai Sujet: Data Engineering</p>
+<h2>Chapeau</h2>
+<p>Si l’on veut travailler avec des données en Python de façon moderne et professionnelle, tout revient à un concept central : le traitement de données avec des DataFrames. Peu importe l’outil choisi, pandas, PySpark ou Polars, le coeur du travail reste le même : prendre des données organisées en lignes et colonnes, les charger dans le code, les transformer, les agréger, les combiner, puis les réécrire vers une cible utile.</p>
+<p>La vidéo défend une idée simple et très opérationnelle : les bibliothèques changent, les moteurs d’exécution changent, les performances changent, mais la logique mentale demeure. Maîtriser le DataFrame, c’est comprendre la forme commune derrière l’analyse de données, les pipelines ETL, le nettoyage, les jointures, les agrégations et la préparation de jeux de données exploitables.</p>
+<h2>Thèses principales</h2>
+<p class="bullet">• Le DataFrame est le concept central du travail data en Python.</p>
+<p class="bullet">• Les structures Python classiques, comme les listes de dictionnaires, deviennent vite illisibles et ingérables dès que les données ressemblent à de vraies données d’entreprise.</p>
+<p class="bullet">• Une table n’est pas seulement une matrice : elle possède un schéma, avec des noms de colonnes, des types et des règles implicites de gestion.</p>
+<p class="bullet">• Excel et les bases de données manipulent déjà des tables, mais la table reste extérieure au code Python ; le DataFrame la fait entrer dans le programme.</p>
+<p class="bullet">• pandas, PySpark et Polars partagent une grammaire proche de SQL : filtrer, sélectionner, trier, grouper, joindre.</p>
+<p class="bullet">• Leur vraie différence vient de l’exécution : pandas travaille sur une seule machine et exécute immédiatement ; PySpark distribue le travail et optimise paresseusement ; Polars combine la simplicité locale avec des idées d’optimisation modernes.</p>
+<p class="bullet">• Le choix de l’outil dépend de la taille des données, de l’infrastructure, du rôle métier et du niveau de complexité des transformations.</p>
+<h2>Article long format</h2>
+<h3>Du morceau de donnée à la table métier</h3>
+<p>Dans Python, le rapport à la donnée commence de manière presque trop simple. Une valeur isolée suffit pour apprendre : un nombre, une chaîne de caractères, un booléen. C’est utile pour comprendre le langage, écrire une condition, passer un argument à une fonction. Mais la donnée d’entreprise n’arrive presque jamais sous cette forme. Un client n’est pas une valeur ; une vente n’est pas une valeur ; une ligne de transaction, une mesure, un événement applicatif, un enregistrement de capteur ne sont pas des unités abstraites flottant seules dans le vide. Ils portent plusieurs attributs, et ces attributs doivent rester ensemble.</p>
+<p>La première réponse naturelle consiste à grouper les valeurs dans des structures Python : listes, dictionnaires, tuples. Un dictionnaire peut représenter un client avec un identifiant, un nom, un âge. À ce stade, la donnée commence à ressembler à quelque chose de métier. Puis le réel revient aussitôt frapper à la porte : une entreprise n’a pas un client, elle en a des milliers, parfois des millions. On fabrique alors une liste de dictionnaires, chaque dictionnaire représentant un enregistrement. Visuellement, on commence déjà à voir apparaître une sorte de tableau à deux dimensions.</p>
+<p>Cette solution dépanne, mais elle ne tient pas longtemps. Dès que le volume augmente, dès que le nombre d’attributs grimpe, dès que les valeurs manquantes se multiplient, dès que les transformations deviennent un peu sérieuses, la liste de dictionnaires devient un cauchemar. Il faut boucler partout, imbriquer les accès, répéter des morceaux de logique, maintenir du code verbeux et fragile. Pour lire une colonne, filtrer des lignes, créer une variable dérivée ou agréger par groupe, on se retrouve à bricoler ce que les outils data savent déjà faire proprement.</p>
+<p>C’est précisément là que la table devient la forme naturelle. Une table organise les données en lignes, colonnes et cellules. Chaque ligne représente un enregistrement : un client, une commande, une transaction. Chaque colonne représente une caractéristique : l’identifiant, le nom, l’âge, la date, le montant, le statut. Chaque cellule contient une valeur particulière, située à l’intersection d’un enregistrement et d’un attribut. Cette forme est lisible pour les humains, mais elle correspond aussi à la manière dont la plupart des organisations structurent leur information.</p>
+<p>La vidéo insiste sur un point souvent sous-estimé : une table n’est pas seulement une grille remplie de valeurs. Elle vient avec un schéma. Le schéma décrit la structure : le nom de la table, les noms de colonnes, les types de données. Une colonne peut contenir des entiers, une autre du texte, une autre des dates. Ce schéma agit comme une sorte de plan de construction. Sans lui, la donnée retombe dans le désordre des structures imbriquées, où rien ne garantit vraiment ce que contient chaque champ ni comment les opérations doivent être interprétées.</p>
+<h3>Faire entrer la table dans le code</h3>
+<p>Une fois la table identifiée comme forme centrale, la question devient très concrète : où vit-elle ? Elle peut vivre dans Excel. Tout le monde connaît ce modèle. Les données sont visibles, manipulables, disposées en colonnes, prêtes à être filtrées, copiées, corrigées. Pour une analyse rapide, un petit fichier, un travail ponctuel, Excel fonctionne. Mais dès que la logique se complexifie, l’outil se met à craquer. On clique, on corrige à la main, on répète des gestes difficiles à automatiser, on introduit des erreurs invisibles.</p>
+<p>La table peut aussi vivre dans une base de données. Dans ce cas, elle bénéficie d’un moteur optimisé pour le stockage et les requêtes. SQL est excellent pour interroger des tables, filtrer, joindre, agréger. Mais lorsque les transformations deviennent longues, imbriquées, modulaires, la requête SQL peut devenir lourde à maintenir. Les procédures stockées ajoutent une dimension programmable, mais elles ne donnent pas la même souplesse qu’un véritable écosystème Python, avec ses modules, ses fonctions, ses bibliothèques spécialisées et sa capacité à structurer un workflow complet.</p>
+<p>Dans ces deux cas, Excel comme base de données, la table reste extérieure au code Python. On peut la lire, l’interroger, l’exporter, mais on ne travaille pas directement dessus avec toute la puissance du langage. L’idée qui change le jeu consiste à amener une copie de cette table dans le programme. À partir de ce moment, elle devient un DataFrame : encore une table, mais une table vivante dans le code.</p>
+<p>Le DataFrame est un objet Python spécialisé, stocké en mémoire pendant la session. Il peut être chargé depuis un CSV, un fichier Excel, un fichier texte, une base de données, une API, un flux. Une fois présent en mémoire, il devient manipulable par des opérations de filtrage, transformation, combinaison, agrégation, création de colonnes, nettoyage, préparation. On travaille étape par étape, puis on écrit le résultat vers une cible : fichier, base de données, stream, plateforme data.</p>
+<p>Ce cycle est exactement celui du data processing. En data engineering, il prend la forme d’un ETL : on extrait les données de plusieurs sources, on les charge dans une structure de travail, on les transforme, puis on les dépose dans un système cible. En data analytics, le même mouvement revient avec une intensité différente : charger des données, les explorer, les nettoyer, agréger selon plusieurs angles, produire un jeu préparé, parfois l’envoyer vers Power BI pour construire des tableaux de bord et des rapports.</p>
+<h3>Une grammaire commune proche de SQL</h3>
+<p>Python ne fournit pas dans sa bibliothèque standard un outil complet pour manipuler des DataFrames. Pour les valeurs simples et les structures de base, les fonctions intégrées suffisent largement. Pour les tables, il faut importer une bibliothèque externe. La vidéo en retient trois : pandas, PySpark et Polars.</p>
+<p>Ces trois bibliothèques paraissent différentes, mais elles partagent une même grammaire. Elles ressemblent à SQL parce qu’elles manipulent la même forme logique : des tables, des colonnes, des lignes. Filtrer rappelle `WHERE`. Sélectionner rappelle `SELECT`. Trier rappelle `ORDER BY`. Grouper rappelle `GROUP BY`. Joindre rappelle les `JOIN`. Pour quelqu’un qui connaît déjà SQL, l’apprentissage devient beaucoup plus facile, car les verbes mentaux sont déjà là.</p>
+<p>La différence n’est donc pas d’abord dans les opérations visibles. Elle se trouve derrière la scène, dans la manière dont chaque outil exécute le travail. Est-ce que tout tient sur une seule machine ? Est-ce que les opérations s’exécutent immédiatement ? Est-ce que le moteur construit un plan avant de lancer les calculs ? Est-ce que le traitement peut être distribué sur plusieurs machines ? Voilà les questions qui séparent vraiment pandas, PySpark et Polars.</p>
+<h3>pandas : simplicité, immédiateté, machine unique</h3>
+<p>pandas prend les données, les place dans un DataFrame et travaille sur une seule machine. Tout vit en mémoire locale. Quand on demande un filtre, le filtre est appliqué tout de suite. Quand on demande un groupement, le groupement s’exécute immédiatement. Quand on crée une colonne, elle apparaît dans le DataFrame. L’exécution est directe, presque tactile.</p>
+<p>Cette immédiateté explique pourquoi pandas est si populaire chez les analystes. On explore les données pas à pas. On inspecte, on filtre, on corrige, on recommence. Le modèle mental est simple : une action demandée, une action réalisée. On n’a pas besoin de configurer un cluster, de gérer une infrastructure distribuée, de réfléchir au plan global d’optimisation avant d’obtenir un résultat.</p>
+<p>La limite est inscrite dans cette force. pandas travaille sur une seule machine. Si les données ne tiennent plus en mémoire, l’expérience s’effondre. Pour un usage analytique local, pandas reste très naturel. Pour un pipeline massif qui doit déplacer et transformer d’énormes volumes, la machine unique devient un plafond.</p>
+<h3>PySpark : big data, distribution et exécution paresseuse</h3>
+<p>PySpark entre en scène lorsque la donnée devient trop grande pour une seule machine. Il s’appuie sur le moteur Spark et distribue le DataFrame sur plusieurs machines qui travaillent en parallèle, en mémoire. Ce modèle répond au problème central du big data : on ne demande plus à un ordinateur de tout porter seul, on répartit la charge.</p>
+<p>La seconde différence est l’exécution paresseuse. Avec PySpark, les opérations ne se lancent pas immédiatement. Quand on écrit un filtre, une transformation, un groupement, PySpark construit progressivement un plan. Il observe l’ensemble du workflow, l’optimise, puis attend qu’une action demande réellement un résultat. C’est seulement à ce moment que le moteur exécute le plan.</p>
+<p>Cette paresse n’est pas un retard inutile ; elle donne au moteur une vision d’ensemble. Au lieu d’exécuter naïvement chaque étape dès qu’elle est écrite, PySpark peut réorganiser, optimiser, préparer une exécution plus efficace. Pour le data engineering, cette logique est fondamentale. Les pipelines doivent souvent extraire de grandes quantités de données, les transformer, les nettoyer, les enrichir, puis les charger ailleurs. Dans ce monde-là, une seule machine ne suffit pas.</p>
+<p>Le prix à payer est l’infrastructure. PySpark peut intimider les analystes parce qu’il suppose un environnement plus lourd, une logique distribuée, des concepts d’exécution moins immédiats. La vidéo décrit très bien la séparation qui s’est installée pendant des années : les analystes jouaient avec pandas, dans une ambiance calme et locale ; les data engineers utilisaient PySpark et les gros moteurs pour traiter des volumes massifs.</p>
+<p>Les plateformes modernes changent partiellement ce paysage. Databricks, par exemple, s’appuie sur Spark tout en masquant une grande partie de sa complexité. Pour l’utilisateur, PySpark peut alors ressembler davantage à pandas, tandis que le moteur big data travaille derrière la scène. Ce déplacement rend PySpark plus accessible aux analystes qui travaillent déjà dans une plateforme préparée.</p>
+<h3>Polars : le compromis moderne</h3>
+<p>Polars arrive comme un nouvel acteur rapide, net, efficace. Son idée centrale consiste à prendre quelque chose aux deux mondes. Comme pandas, il fonctionne sur une seule machine, avec une installation et une utilisation plus simples qu’un système distribué. Comme Spark, il adopte une logique d’optimisation et d’exécution paresseuse, capable de construire un plan avant de lancer les calculs.</p>
+<p>Cette combinaison explique son intérêt. Polars conserve une partie de la simplicité locale que les analystes aiment chez pandas, tout en empruntant à PySpark l’idée qu’un moteur peut planifier et optimiser un workflow au lieu d’exécuter chaque étape sans recul. Dans la vidéo, Polars apparaît comme un outil particulièrement moderne pour les analystes qui veulent plus de performance et une API plus orientée expressions, sans entrer dans la complexité complète du monde distribué.</p>
+<p>Il ne remplace pas PySpark lorsque le besoin réel est de distribuer massivement le travail. Une machine reste une machine. Mais il devient une option sérieuse lorsque les données peuvent tenir dans un environnement local et que l’on veut un moteur plus rapide, plus optimisé, plus contemporain que le modèle pandas classique.</p>
+<h3>Choisir selon le travail réel</h3>
+<p>Le choix entre pandas, PySpark et Polars ne devrait pas être une guerre de préférences. Il dépend du travail à accomplir. Si l’on explore des données, que l’on construit des analyses progressives, que l’on veut comprendre un dataset étape par étape, pandas reste le réflexe le plus répandu. Sa force est dans la clarté immédiate.</p>
+<p>Si l’on traite des volumes massifs, que l’on construit des pipelines, que l’on déplace des données d’une source vers une cible avec des transformations lourdes, PySpark devient l’outil naturel. Il demande plus de compréhension technique, mais il donne accès au calcul distribué, à la paresse d’exécution et à l’optimisation globale.</p>
+<p>Si l’on veut rester sur une machine tout en bénéficiant d’une logique d’exécution plus moderne, Polars occupe une position très intéressante. Il parle aux analystes qui trouvent pandas simple mais veulent aller plus vite, et aux profils data qui comprennent l’intérêt de la planification sans vouloir gérer une infrastructure Spark complète.</p>
+<p>La compétence la plus durable reste donc le DataFrame lui-même. Les bibliothèques changent, les syntaxes varient, les moteurs progressent. Mais la capacité à penser en lignes, colonnes, schémas, transformations, agrégations, jointures et chargements reste centrale. C’est la base du travail data en Python.</p>
+<h3>Ce qu’il faut intégrer dans un workflow Data/AI</h3>
+<p>Pour un workflow opérationnel, la vidéo donne une boussole claire. On part d’une source : fichier CSV, Excel, texte, base de données, API, stream. On charge une copie des données dans un DataFrame. On vérifie la structure, les colonnes, les types, les valeurs manquantes. On applique les transformations nécessaires : nettoyer, filtrer, joindre, créer de nouvelles colonnes, grouper, agréger. Puis on écrit le résultat vers une cible adaptée.</p>
+<p>Les risques principaux sont très concrets. Excel devient manuel et fragile dès que le processus doit être répété. SQL devient difficile à maintenir lorsque les transformations s’empilent en longues requêtes imbriquées. pandas échoue lorsque les données dépassent la mémoire d’une seule machine. PySpark impose une marche plus haute à cause de la distribution et de l’infrastructure. Polars réduit certaines frictions, mais ne transforme pas une machine unique en cluster.</p>
+<p>Les compétences à renforcer suivent directement cette carte : bases solides de Python, compréhension de SQL, manipulation de colonnes, filtrage, jointures, groupements, nettoyage, schémas, types de données, différence entre exécution immédiate et exécution paresseuse. Le DataFrame devient alors l’interface mentale commune entre analyse, data engineering et préparation de données pour des usages BI ou IA.</p>
+<h2>Formulations marquantes</h2>
+<p class="bullet">• Tout revient à un concept simple : traiter la donnée avec des DataFrames.</p>
+<p class="bullet">• Une liste de dictionnaires ressemble à de la donnée métier, mais elle devient vite un cauchemar dès que le volume et la complexité montent.</p>
+<p class="bullet">• Une table n’est pas seulement une matrice : son schéma est le plan et les règles qui rendent la donnée gouvernable.</p>
+<p class="bullet">• Excel permet de manipuler une table, mais trop souvent à la main ; la base de données stocke et interroge, mais Python donne la flexibilité du programme.</p>
+<p class="bullet">• pandas exécute maintenant, PySpark construit un plan, Polars essaie de garder la simplicité tout en gagnant l’optimisation.</p>
+<p class="bullet">• Pour travailler sur de vraies données d’entreprise en Python, il faut maîtriser le DataFrame avant de s’attacher à une bibliothèque particulière.</p>
+<h2>À retenir</h2>
+<p>Le DataFrame est la forme de base du travail data moderne en Python. pandas, PySpark et Polars ne sont pas trois mondes séparés : ils sont trois manières d’exécuter une même logique tabulaire.</p>
+<p>Pour choisir correctement : pandas pour l’analyse locale simple et immédiate, PySpark pour le big data distribué et les pipelines lourds, Polars pour un travail local moderne, rapide et optimisable. La compétence durable n’est pas de réciter une API, mais de savoir transformer proprement une table : comprendre son schéma, nettoyer ses colonnes, filtrer ses lignes, créer ses variables, grouper, joindre, agréger et charger le résultat là où il devient utile.</p>
+  <p class="source">Source vidéo : <a href="https://www.youtube.com/watch?v=TYnXqVrVz8k">https://www.youtube.com/watch?v=TYnXqVrVz8k</a></p>
+</main>
+</body>
+</html>
