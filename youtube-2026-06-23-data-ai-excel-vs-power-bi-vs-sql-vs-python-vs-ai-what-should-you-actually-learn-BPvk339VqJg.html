@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Data with Baraa">
+  <meta name="keywords" content="youtube, data-ai">
+  <title>Excel vs Power BI vs SQL vs Python vs AI: What Should You Actually Learn?</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f7f4ed;
+      color: #171717;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.12em;
+      line-height: 1.68;
+    }
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 28px 72px;
+      background: #fffdf8;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: 2.05rem;
+      line-height: 1.12;
+      font-weight: 700;
+    }
+    h2 {
+      margin: 2.1rem 0 0.75rem;
+      font-size: 1.35rem;
+      line-height: 1.25;
+    }
+    h3 {
+      margin: 1.55rem 0 0.55rem;
+      font-size: 1.1rem;
+      line-height: 1.3;
+    }
+    p {
+      margin: 0 0 1rem;
+    }
+    .meta, .source, .bullet {
+      color: #555;
+      font-size: 0.94rem;
+      line-height: 1.48;
+    }
+    .bullet {
+      color: #222;
+      padding-left: 0.6rem;
+    }
+    .source {
+      margin-top: 2.4rem;
+      border-top: 1px solid #ddd6c8;
+      padding-top: 1rem;
+    }
+    a { color: #173f5f; }
+    @media (max-width: 640px) {
+      body { font-size: 1.12em; }
+      main { padding: 34px 18px 56px; }
+      h1 { font-size: 1.78rem; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <p class="meta">Data with Baraa · 2026-06-23 · tags: youtube, data-ai</p>
+  <p>title: &quot;Excel vs Power BI vs SQL vs Python vs AI: What Should You Actually Learn?&quot; source_type: &quot;youtube&quot; source_url: &quot;https://www.youtube.com/watch?v=BPvk339VqJg&quot; youtube_id: &quot;BPvk339VqJg&quot; channel: &quot;Data with Baraa&quot; category: &quot;data-ai&quot; topic: &quot;Analytics / BI&quot; published: &quot;2026-06-23&quot; language: &quot;fr&quot; created: &quot;2026-06-29T09:32:54+02:00&quot; tags:</p>
+<p class="bullet">• article</p>
+<p class="bullet">• youtube</p>
+<p class="bullet">• data-ai</p>
+<p>Retour index: [[Articles]]</p>
+<h1>Excel vs Power BI vs SQL vs Python vs AI: What Should You Actually Learn?</h1>
+<p>Source: https://www.youtube.com/watch?v=BPvk339VqJg Chaîne: Data with Baraa Catégorie: data-ai Sujet: Analytics / BI</p>
+<h2>Chapeau</h2>
+<p>Travailler avec la donnée commence souvent par une question très simple: pourquoi existe-t-il autant d’outils pour faire, apparemment, la même chose? Excel, Power BI, SQL, Python, maintenant l’IA: chacun promet de nettoyer, analyser, visualiser, automatiser, expliquer. La tentation naturelle consiste à chercher l’outil unique, celui qui ferait tout et dispenserait d’apprendre les autres. La vidéo démonte cette illusion par une histoire concrète: celle d’un analyste qui commence avec un fichier Excel, réussit, puis voit son succès devenir un système fragile.</p>
+<p>L’idée centrale est nette: aucun de ces outils n’a disparu, parce qu’aucun ne résout seul toute la chaîne data à un niveau professionnel. Excel reste imbattable pour explorer vite. Power BI transforme l’analyse en produit interactif et partageable. SQL devient indispensable dès que la préparation doit être centralisée, robuste et réutilisable. Python prend le relais dès que la donnée sort des murs de la base: API, streaming, fichiers, orchestration, tests, logs, machine learning. L’IA accélère tout, mais introduit un risque majeur: dans les systèmes de données, les erreurs sont souvent silencieuses.</p>
+<p>La bonne question n’est donc pas “quel outil apprendre à la place des autres?”, mais “à quel moment chaque outil devient-il le bon outil, et à quel moment devient-il le mauvais endroit pour continuer?”.</p>
+<h2>Thèses principales</h2>
+<p class="bullet">• Excel est le meilleur point de départ pour une analyse rapide sur petit volume, mais il devient un cauchemar lorsqu’on l’utilise comme système récurrent de production analytique.</p>
+<p class="bullet">• Power BI résout l’automatisation, le partage et l’interactivité, mais Power Query peut devenir chaotique et lent si toute la préparation de données y reste enfermée.</p>
+<p class="bullet">• SQL et la base analytique déplacent la préparation dans un vrai back-end: tables, vues, couches bronze/silver/gold, performance, source unique de vérité.</p>
+<p class="bullet">• SQL ne suffit plus dès que le pipeline doit appeler des API, écouter des flux, gérer des erreurs, produire des logs ou orchestrer des traitements hors base.</p>
+<p class="bullet">• Python ne remplace pas SQL: il l’entoure, l’orchestre, l’étend, connecte les systèmes modernes et ouvre les portes de Pandas, Great Expectations et scikit-learn.</p>
+<p class="bullet">• L’IA peut transformer un analyste ou un data engineer en machine de production, mais elle est dangereuse si elle écrit des transformations que personne ne comprend ni ne vérifie.</p>
+<p class="bullet">• Dans la data, la confiance est le vrai capital. Un job peut être vert, ne produire aucune erreur, et pourtant livrer des chiffres faux aux utilisateurs métiers.</p>
+<p class="bullet">• Le bon stack n’est pas une guerre d’outils. C’est une répartition des responsabilités.</p>
+<h2>Article long format</h2>
+<h3>Contexte: la vraie naissance d’un projet data</h3>
+<p>Tout commence rarement par un outil. Dans une entreprise, le point de départ est plus banal et plus sérieux: des managers, des parties prenantes, des chefs de projet doivent prendre une décision. Ils ont des questions critiques. Ils pourraient répondre à l’instinct, mais, dans un cadre un peu mûr, la décision doit reposer sur des faits. Pour cela, il faut des données.</p>
+<p>Ces données vivent déjà quelque part. Elles sont dans les applications de l’entreprise, plus exactement dans les bases de données qui soutiennent ces applications. Le CRM, l’ERP, l’outil de vente, le système de support, l’application métier: tout cela produit de la donnée en continu. Mais les personnes qui doivent décider n’ont ni le temps ni le rôle d’aller fouiller directement dans ces systèmes. C’est là qu’entre en scène l’analyste data.</p>
+<p>La première désillusion arrive très vite. Les applications ne sont pas conçues pour que l’analyste vienne y bricoler ses calculs. Ce sont des systèmes transactionnels. Ils doivent servir les opérations quotidiennes, pas devenir un terrain d’expérimentation analytique. Très souvent, l’application offre alors une porte minimale: exporter les données. Un fichier Excel, un CSV, parfois plusieurs fichiers. Le voyage data commence ainsi, presque modestement: télécharger les données, les poser localement sur son ordinateur, ouvrir un outil connu.</p>
+<p>Cet outil, presque toujours, c’est Excel.</p>
+<h3>Excel: le miracle du premier cycle</h3>
+<p>Excel a une force que les professionnels oublient parfois à force de parler architecture, cloud, pipelines et modèles sémantiques: il permet de commencer sans cérémonie. Pas de serveur. Pas de base dédiée. Pas de langage de programmation. On ouvre le fichier, on importe le CSV, et l’on voit enfin les lignes et les colonnes.</p>
+<p>Le premier travail consiste à explorer. On regarde les données pour la première fois. On comprend les champs, on repère les montants, les dates, les catégories, les valeurs étranges. On note les premiers signaux: une colonne inutile, des valeurs nulles, des doublons, des lignes corrompues, des formats incohérents. Cette phase n’est pas glamour, mais elle fonde tout le reste. Avant de calculer, il faut savoir de quoi les chiffres sont faits.</p>
+<p>Puis vient le nettoyage. On supprime les lignes inutilisables, on enlève les colonnes sans intérêt, on remplace certains vides, on découpe des chaînes de caractères, on reshape les données pour les rendre exploitables. Excel est suffisamment proche de l’utilisateur pour que ces gestes paraissent naturels. On voit les cellules changer. On teste vite. On corrige. On recommence.</p>
+<p>Ensuite arrive l’analyse. Les formules se multiplient. On agrège, on compare, on calcule des ratios, on vérifie une tendance, on rapproche deux colonnes. Les graphiques apparaissent. Une histoire commence à se former. Les questions métiers obtiennent des réponses. La donnée brute devient un argument.</p>
+<p>À ce stade, l’analyste ne va généralement pas projeter son classeur Excel brut devant la direction. Excel est son atelier, pas la scène finale. Il extrait les résultats, prépare des graphiques plus propres, assemble une présentation dans PowerPoint, puis raconte l’histoire aux managers. Le résultat est exactement celui attendu: les décideurs comprennent les chiffres, prennent une décision, et l’analyste a livré toute la chaîne de bout en bout.</p>
+<p>C’est la beauté initiale d’Excel. Une personne seule, avec un laptop, peut accomplir le cycle complet: exporter, explorer, nettoyer, calculer, visualiser, présenter. Pour un premier besoin, pour un petit volume, pour une question ponctuelle, Excel est probablement l’outil le plus rapide du monde.</p>
+<p>Le piège commence précisément quand ce premier succès fonctionne trop bien.</p>
+<h3>Quand Excel devient un système, le cauchemar commence</h3>
+<p>Après une bonne présentation, les utilisateurs métiers reviennent rarement avec moins de demandes. Ils veulent le même rapport la semaine suivante. Puis toutes les semaines. Avec les chiffres mis à jour. Envoyés avant la réunion. Peut-être avec quelques graphiques de plus. Peut-être avec une nouvelle source.</p>
+<p>Au début, cela semble raisonnable. La première itération a pris deux ou trois semaines parce qu’il fallait découvrir les données. La deuxième ira plus vite. Les formules existent déjà, les graphiques sont prêts, le contenu est connu. Il suffira de réexporter, de réimporter, de rafraîchir, de copier dans PowerPoint. Quelques heures, pense-t-on. Rien de dramatique.</p>
+<p>La réalité d’entreprise change pourtant vite. La société grandit. Elle gagne des clients. Les volumes augmentent. Les processus deviennent plus complexes. L’application source, qui produisait hier un fichier confortable, génère maintenant un gros fichier. L’export prend dix ou vingt minutes. L’import dans Excel prend une demi-heure. On lance le chargement, on va chercher un café, on revient, et ça tourne encore. Puis un jour, le fichier ne charge plus.</p>
+<p>C’est là que naissent les monstres familiers: `sales_part_1.xlsx`, `sales_part_2.xlsx`, `sales_final.xlsx`, puis `sales_final_v2.xlsx`. On découpe l’entrée en plusieurs fichiers, on duplique le classeur, on recombine les morceaux pour produire les agrégations finales. Le processus qui devait durer quelques heures avale une journée. Puis deux. Puis trois.</p>
+<p>Pendant ce temps, les demandes métiers continuent. Les utilisateurs veulent plus de graphiques, donc plus de calculs. Ils veulent croiser avec une autre application, donc un nouvel export, un nouveau nettoyage, une nouvelle intégration manuelle. Chaque source ajoute de la friction. Chaque fichier ajoute un risque. Chaque formule cachée dans une feuille rend la reprise plus difficile.</p>
+<p>La sécurité finit par entrer dans la pièce. On ne peut pas envoyer éternellement des fichiers contenant des données sensibles par e-mail. On ne peut pas faire circuler des exports locaux sans contrôle. Ce qui avait commencé comme une solution rapide devient une dette organisationnelle.</p>
+<p>Le pire, dans cette histoire, est humain. Des analystes se retrouvent embauchés pour faire de la donnée, puis passent leurs semaines à importer des fichiers dans Excel, à attendre des refreshs, à réparer des classeurs devenus incompréhensibles. Après quelques années, ils partent. Personne ne reprend leurs fichiers, parce que personne ne sait vraiment ce qui s’y passe. Les nouveaux recommencent de zéro. Le cycle se répète.</p>
+<p>Le problème n’est pas la compétence de l’analyste, ni l’exigence du métier, ni même Excel comme outil. Excel est très bon pour analyser. Il devient mauvais lorsqu’on lui demande d’être une plateforme analytique complète. Une analyse ponctuelle a été transformée en système de production, et Excel n’est pas fait pour porter seul ce poids.</p>
+<h3>Power BI: sortir de la routine manuelle</h3>
+<p>Le passage à Power BI commence comme une libération. Au lieu de télécharger manuellement un fichier depuis l’application, Power BI Desktop se connecte directement à la base de données source. L’analyste n’est plus obligé de répéter le geste d’export chaque semaine. La donnée peut être récupérée par connexion.</p>
+<p>Les transformations migrent ensuite depuis Excel vers Power Query. Les étapes de nettoyage, de filtrage, de remplacement, de reshaping sont reconstruites dans un composant pensé pour cela. Le projet devient plus professionnel. On peut organiser les tables, construire un modèle en étoile, préparer une structure rapide pour le reporting. Les calculs Excel deviennent des mesures DAX. Comme l’écosystème reste Microsoft, le passage paraît relativement naturel: les logiques de calcul se ressemblent assez pour que l’analyste ne parte pas d’une page blanche.</p>
+<p>La face visible du travail change aussi. Les graphiques et tableaux qui vivaient dans Excel ou PowerPoint migrent dans Power BI. On ne livre plus une présentation statique. On construit un rapport interactif. L’utilisateur peut filtrer, cliquer, explorer, changer de perspective. Le rapport n’est plus seulement une réponse figée à une question passée; il devient un espace d’exploration contrôlé.</p>
+<p>L’étape décisive est la publication dans Power BI Service. Le travail quitte le PC local. Il vit dans le cloud, sur un serveur. On ajoute un déclencheur de rafraîchissement. Power BI va chercher les données à la source, les actualise, publie la version fraîche. La routine hebdomadaire disparaît. Si tout va vite, on peut même proposer un refresh quotidien au lieu d’un refresh hebdomadaire.</p>
+<p>La distribution devient propre: au lieu d’envoyer des fichiers, on partage un lien. Les utilisateurs ouvrent le rapport dans leur navigateur. Les données sensibles ne circulent plus comme pièces jointes. Les chiffres sont centralisés dans un espace plus contrôlé. Pour les métiers, l’expérience est meilleure; pour l’analyste, la charge manuelle baisse fortement.</p>
+<p>Et surtout, tout cela se fait sans écrire de code. Power BI donne une sensation très puissante: avec du drag and drop, un peu de Power Query, un peu de DAX, on peut construire des dashboards utiles pendant des années. Beaucoup de projets data d’entreprise vivent longtemps dans cet espace, et c’est normal. Pour le reporting, la visualisation, le partage et l’interaction métier, Power BI est un outil redoutable.</p>
+<p>Mais un nouveau succès produit une nouvelle échelle, et cette échelle révèle les limites suivantes.</p>
+<h3>Le moment où Power BI devient trop lourd</h3>
+<p>Quand un projet Power BI grandit, Power Query peut devenir une zone dangereuse. On ajoute table après table. On multiplie les étapes de transformation. On crée des références entre requêtes, des dépendances, des branches de logique. Le projet qui semblait lisible au début devient un enchevêtrement.</p>
+<p>Les volumes montent aussi. Les tables sources grossissent. Les refreshs qui prenaient quelques minutes prennent une heure ou plus. L’analyste veut optimiser, mais Power Query ressemble vite à une boîte noire. On n’a pas le même degré de contrôle qu’avec une vraie base: pas d’index à poser finement, pas de stratégie de partitionnement maîtrisée au même niveau, pas de réécriture SQL profonde pour ajuster le plan d’exécution. Le refresh ralentit, et l’on manque d’outils pour reprendre la main.</p>
+<p>Une autre limite apparaît lorsque d’autres équipes découvrent que votre modèle prépare une donnée complexe dont elles ont aussi besoin. Elles veulent réutiliser ce travail pour leurs propres rapports. Si la préparation reste enfermée dans Power BI, elles risquent de copier vos étapes, de les réimplémenter, puis de les modifier. Très vite, plusieurs projets prétendent traiter le même domaine, mais chacun applique une logique légèrement différente.</p>
+<p>Le résultat est toxique: les utilisateurs métiers voient des chiffres contradictoires selon le rapport consulté. La confiance baisse. Personne ne sait où se trouve la vérité. Le problème n’est plus seulement technique; il devient organisationnel. Power BI est excellent pour modéliser, reporter, visualiser, partager. Il n’est pas la meilleure fondation pour une plateforme de données réutilisable par plusieurs projets.</p>
+<p>À ce stade, il faut retirer une partie de la responsabilité de Power BI. Non pas l’abandonner, mais le remettre à sa juste place. La préparation lourde doit passer dans un vrai back-end analytique.</p>
+<h3>SQL et l’entrepôt: donner une colonne vertébrale à la donnée</h3>
+<p>Le pas suivant consiste à créer une base dédiée à l’analytics. Elle ne remplace pas les applications transactionnelles; elle sert l’analyse. Au départ, elle est vide. Il faut y migrer les transformations qui vivaient dans Power Query. Cette fois, la logique est écrite en SQL.</p>
+<p>SQL est l’outil roi pour travailler directement avec des données tabulaires dans une base. On peut nettoyer, joindre, agréger, filtrer, reshaper, créer des vues ou matérialiser des tables. Là où Power Query enfermait la préparation dans le rapport, SQL la rend visible, partageable, testable, réutilisable dans une couche commune.</p>
+<p>L’organisation prend souvent la forme de plusieurs couches. La vidéo cite le schéma bronze, silver, gold, ou son équivalent stage, core, mart. Les noms comptent moins que la séparation des responsabilités. La première couche reçoit les données proches de la source. La deuxième les nettoie, les standardise, les rend cohérentes. La troisième prépare des tables prêtes pour les usages analytiques, les modèles, les rapports et les consommateurs. Avec cette structure, on commence à parler d’entrepôt de données.</p>
+<p>Power BI change alors de rôle. Il ne se connecte plus directement aux systèmes sources. Il se connecte à la couche finale de l’entrepôt. Power Query devient presque vide. Le fichier Power BI s’allège. Il conserve le modèle, les mesures DAX et les rapports. La préparation lourde a quitté le front-end pour rejoindre le back-end.</p>
+<p>Il reste à automatiser la base elle-même. La vidéo évoque les procédures stockées: une manière d’écrire la logique de chargement dans l’univers SQL. Une procédure peut définir la séquence: source vers bronze, bronze vers silver, silver vers gold. On ajoute un déclencheur pour lancer le chargement nocturne depuis les systèmes sources, puis un autre déclencheur côté Power BI pour rafraîchir les rapports à partir de la couche gold. L’ensemble devient une pipeline data.</p>
+<p>Le gain majeur tient à la répartition des responsabilités. SQL ne remplace pas Power BI. Power BI ne porte plus tout. La préparation et la transformation vivent dans la base; la visualisation, le reporting et l’interaction restent dans Power BI. Le stack devient plus solide parce que chaque outil travaille dans son domaine de force.</p>
+<p>Cette architecture encaisse mieux les volumes. Si les données grossissent, la base offre des leviers d’optimisation: index, partitionnement, réécriture de requêtes. Power BI n’a plus à recalculer des transformations lourdes à chaque refresh; il charge une copie structurée depuis la couche finale. L’exploration technique devient aussi plus rapide: pour enquêter sur un problème de qualité, on écrit une requête SQL ciblée et l’on inspecte les lignes, plutôt que de cliquer dans un modèle Power BI encombré.</p>
+<p>Le bénéfice collectif est encore plus important. Le domaine traité devient un produit de données. Les autres équipes peuvent consommer la couche commune au lieu de refaire les mêmes transformations dans leurs rapports. L’entreprise réduit le risque de chiffres divergents. Une source de vérité se forme, au moins pour ce domaine. C’est le moment où l’analyste commence à devenir aussi data engineer ou analytics engineer.</p>
+<p>Pour beaucoup de projets, Power BI plus SQL suffit déjà largement. Mais la vidéo insiste sur une dynamique constante: si le projet réussit, il grandit; s’il grandit, ses limites se déplacent.</p>
+<h3>Quand SQL atteint les murs de la base</h3>
+<p>Les systèmes sources évoluent. Une application moderne peut décider qu’elle ne fournit plus un accès direct à sa base. Ce mode est jugé classique, legacy, trop couplé. Désormais, les données passent par des API ou des endpoints de streaming. L’équipe donne un délai: dans un mois, il faudra consommer ces interfaces.</p>
+<p>Pour un stack centré sur SQL et base de données, c’est un choc. SQL est excellent à l’intérieur de la base, mais il vit dans son propre monde. Appeler une API, écouter un flux, gérer des fichiers semi-structurés, réessayer un job après échec, écrire des logs détaillés: tout cela dépasse vite le confort des procédures stockées.</p>
+<p>Les pipelines cassent tout le temps. La vidéo le dit sans romantisme. Déboguer des procédures stockées peut devenir un cauchemar. Pour réduire les risques, on ajoute des contrôles de qualité, des reruns, du logging, des statuts, de la logique conditionnelle. Peu à peu, les procédures stockées se remplissent de comportements qui ressemblent à un programme. Sauf que SQL n’est pas le meilleur langage pour orchestrer tout ce qui entoure la donnée.</p>
+<p>SQL reste roi pour transformer les données dans la base. Mais dès que le travail sort des murs de cette base, il faut un vrai langage de programmation. C’est le moment d’introduire Python.</p>
+<h3>Python: l’outil autour de SQL</h3>
+<p>La transition vers Python ne demande pas de jeter SQL. C’est une nuance essentielle. Les requêtes SQL peuvent rester là où elles excellent: préparation, transformation, heavy lifting dans la base. Python vient autour. Il remplace les procédures stockées comme couche d’orchestration et d’intégration.</p>
+<p>Avec Python, la pipeline devient un script ou un ensemble de scripts capables de piloter la base, appeler des API, lire des fichiers, écouter des flux, manipuler du JSON, produire des logs, gérer des erreurs. Python ouvre l’accès à des bibliothèques qui rendent ces tâches beaucoup plus naturelles. La vidéo cite notamment Great Expectations pour les contrôles de qualité. On peut imaginer des tests qui vérifient qu’une table n’est pas vide, qu’une clé ne contient pas trop de nulls, qu’un total reste dans une plage attendue, qu’un nombre de lignes ne chute pas brutalement après une jointure.</p>
+<p>Python sert aussi l’exploration ponctuelle. Si un collègue envoie un fichier Excel pour une vérification rapide, il serait lourd de créer une table, un schéma, un chargement, juste pour jeter un coup d’œil. Avec Python et Pandas, on lit le fichier directement, on explore les colonnes, on filtre, on agrège, on comprend. Pandas ressemble assez à SQL dans sa logique de travail tabulaire pour que le passage soit naturel lorsqu’on connaît déjà les opérations de base.</p>
+<p>Cette souplesse ne supprime pas la base. Pour les chargements quotidiens ou hebdomadaires, la vidéo garde une position claire: on continue à utiliser SQL et la base de manière systématique et automatisée. Python sert à orchestrer, connecter, tester, étendre. SQL continue à faire ce qu’il fait mieux que presque tout le reste.</p>
+<p>Python ouvre enfin la porte à l’analytics avancée. Lorsque les métiers ne demandent plus seulement “que s’est-il passé?”, mais “que va-t-il se passer?”, on quitte le reporting classique. Les prédictions, les modèles de machine learning, les analyses avancées exigent des bibliothèques comme scikit-learn. Ni SQL ni Power BI ne sont le bon terrain principal pour construire ce type de système prédictif.</p>
+<p>Avec Power BI, SQL et Python, l’analyste est armé pour une grande partie des tâches d’analytics engineering. Il peut livrer des rapports, construire une base analytique, orchestrer des pipelines, intégrer des sources modernes, explorer des fichiers, ajouter des contrôles de qualité, aller vers la prédiction.</p>
+<p>Puis arrive une limite plus subtile: la personne ou l’équipe qui sait faire tout cela devient elle-même le goulot d’étranglement.</p>
+<h3>Le plafond de l’équipe data</h3>
+<p>Plus on écrit de scripts Python, plus on maintient de pipelines, plus on s’éloigne du métier. L’analyste qui passait du temps avec les utilisateurs se retrouve à surveiller les jobs, corriger les chargements, vérifier les logs, maintenir les transformations dont dépendent d’autres projets. La plateforme devient utile, donc d’autres équipes s’appuient dessus, donc la responsabilité augmente.</p>
+<p>Chaque nouvelle source ajoute une charge. Chaque table doit être chargée, contrôlée, maintenue. Chaque extension promet de la valeur, mais ajoute aussi un risque. On peut continuer à intégrer tout ce que le métier demande, au prix d’une qualité qui se dégrade. Ou bien poser une limite: le projet a atteint sa capacité, l’équipe ne peut plus ajouter de tables, elle doit maintenir ce qui existe déjà.</p>
+<p>La réponse classique serait d’agrandir l’équipe. Embaucher plus de personnes, répartir la maintenance, accélérer le développement. La vidéo exprime un doute très contemporain: beaucoup d’entreprises ne le feront pas forcément. À la place, une autre idée surgit presque naturellement: maintenant, nous avons l’IA.</p>
+<h3>L’IA: accélérateur massif, danger silencieux</h3>
+<p>L’IA entre dans le projet par les tâches pénibles. Documentation, revue de code, détection de code mort, repérage de risques de sécurité, aide à l’écriture de scripts. Si l’utilisateur sait prompter, donner de bonnes instructions, guider le modèle, l’IA peut écrire de grandes parties du code. Elle accélère la création de pipelines, la connexion à de nouvelles sources, la génération de requêtes, la rédaction de tests.</p>
+<p>L’image de la vidéo est volontairement énergique: avec l’IA, on peut se sentir comme une super machine. Tout connecter. Toute table intégrer. Tout système absorber. Le backlog qui semblait impossible commence à bouger. Le développeur data passe en mode ultra.</p>
+<p>Mais c’est aussi le passage le plus dangereux. La vidéo distingue très fortement les systèmes data des applications logicielles classiques. Dans une application, une erreur se voit souvent bruyamment: l’écran casse, l’API renvoie une erreur, le bouton ne marche pas, le programme s’arrête. Dans un système de données, l’erreur peut rester silencieuse. Un mauvais `INNER JOIN` peut retirer une masse énorme de lignes sans provoquer la moindre alerte. Le job tourne. Python ne crie pas. SQL ne rougit pas. Le dashboard se rafraîchit. Tout est vert.</p>
+<p>Et pourtant les chiffres livrés aux métiers sont faux.</p>
+<p>Cette différence change complètement la manière d’utiliser l’IA. L’enjeu n’est pas seulement de produire du code vite. Il faut vérifier que le code préserve les données attendues, respecte la logique métier, ne supprime pas silencieusement des cas, ne duplique pas les montants, ne transforme pas un indicateur en illusion. L’IA peut accélérer le travail, mais elle peut aussi accélérer l’introduction d’erreurs invisibles.</p>
+<p>Dans la data, la confiance est l’infrastructure invisible de tout le reste. Les utilisateurs métiers acceptent de décider avec un rapport parce qu’ils croient que les chiffres sont fiables. Si cette confiance disparaît, aucun outil ne sauve le projet. Personne ne se soucie que le pipeline utilise l’IA, Python, SQL ou les meilleurs services du monde si les nombres ne sont plus crédibles. Regagner la confiance après l’avoir perdue est extrêmement difficile.</p>
+<p>L’IA doit donc être traitée comme un multiplicateur de vitesse soumis à des garde-fous. Elle peut documenter, suggérer, générer, relire. Mais les transformations doivent rester explicables. Les jointures doivent être testées. Les pertes de lignes doivent être mesurées. Les agrégations doivent être comparées à des totaux de contrôle. Les prompts doivent demander non seulement du code, mais aussi les risques, les hypothèses, les tests à faire, les cas limites. Le bon usage de l’IA dans un projet data n’est pas “écris-moi la pipeline et je te crois”. C’est “propose la pipeline, expose les endroits où les chiffres peuvent dériver, écris les contrôles, puis laisse-moi vérifier”.</p>
+<h3>Workflows utiles: choisir l’outil selon le moment</h3>
+<p>La vidéo raconte une progression, mais elle fournit surtout une carte de décision. Le bon outil dépend du niveau de maturité du besoin, du volume, de la récurrence, du risque et du nombre de consommateurs.</p>
+<p>Pour une question rapide, sur un petit fichier, avec une réponse attendue vite, Excel reste imbattable. Il permet de voir, toucher, filtrer, calculer, tester une intuition. Le danger commence lorsque cette analyse devient récurrente, partagée, sensible, et que l’on continue à la porter à la main.</p>
+<p>Pour un reporting régulier destiné à des utilisateurs métiers, Power BI devient le bon centre de gravité. Il automatise les refreshs, donne des rapports interactifs, supprime les envois de fichiers, centralise l’accès. Il est particulièrement fort lorsque la préparation reste raisonnable et que le besoin principal est de visualiser, filtrer, comparer.</p>
+<p>Lorsque plusieurs projets doivent réutiliser les mêmes données préparées, SQL et l’entrepôt deviennent nécessaires. Les transformations ne doivent plus être cachées dans chaque rapport. Elles doivent vivre dans un back-end commun, avec des couches, des tables, des vues, une logique partagée. C’est là qu’apparaît la source unique de vérité.</p>
+<p>Lorsque les sources deviennent modernes, variées, instables, ou que les pipelines exigent logging, qualité, rerun, API, streaming et fichiers semi-structurés, Python prend sa place. Il orchestre ce que SQL ne sait pas bien piloter hors de la base. Il donne aussi un environnement naturel pour les analyses avancées et la prédiction.</p>
+<p>Lorsque l’équipe devient le goulot d’étranglement, l’IA peut accélérer la production. Mais elle ne doit jamais devenir une autorité invisible. Dans un projet data, l’IA doit travailler sous surveillance, avec des tests et une culture de validation.</p>
+<h3>Outils et concepts à maîtriser</h3>
+<p>Excel demande moins de cérémonie, mais il demande de la rigueur. Il faut savoir explorer, nettoyer, utiliser des formules, construire des tableaux croisés, produire des graphiques, reconnaître quand un fichier devient trop lourd et quand une analyse locale devient une dette.</p>
+<p>Power BI demande de comprendre Power Query, le modèle de données, le schéma en étoile, DAX, la publication dans le service, les refreshs planifiés, le partage par lien, l’expérience utilisateur des rapports. Ce n’est pas seulement un outil de graphiques; c’est un produit de reporting.</p>
+<p>SQL demande de savoir interroger, joindre, agréger, nettoyer, transformer, créer des vues ou des tables, organiser les couches d’un entrepôt, penser bronze, silver, gold, ou stage, core, mart. Il demande aussi une sensibilité à la performance: index, partitionnement, réécriture de requêtes lorsque les volumes montent.</p>
+<p>Python demande une autre posture. Il faut savoir lire et écrire des scripts, appeler des bases, manipuler des fichiers, traiter JSON, intégrer API et flux, produire des logs, gérer des erreurs, utiliser Pandas pour l’exploration, Great Expectations pour la qualité, scikit-learn pour le machine learning lorsque la question devient prédictive.</p>
+<p>L’IA demande moins une syntaxe qu’une discipline de pilotage. Il faut savoir formuler des instructions précises, demander des hypothèses, exiger des tests, faire relire du code, demander des scénarios d’échec. La compétence n’est pas seulement de “proposer un prompt”; elle consiste à ne jamais confondre génération rapide et validation robuste.</p>
+<h3>Risques: les endroits où les projets basculent</h3>
+<p>Le premier risque est de laisser une solution temporaire devenir permanente. Excel est parfait pour démarrer, puis destructeur lorsqu’il devient une usine hebdomadaire avec fichiers éclatés, formules cachées, données sensibles envoyées par e-mail.</p>
+<p>Le deuxième risque est de croire que Power BI peut être à la fois front-end, back-end, plateforme de transformation et source commune. Il peut porter beaucoup, mais pas indéfiniment. Quand Power Query accumule des étapes complexes et que plusieurs équipes recopient la logique, la cohérence des chiffres se fragilise.</p>
+<p>Le troisième risque est d’enfermer l’orchestration dans SQL. Les procédures stockées peuvent lancer des traitements, mais dès que la logique commence à ressembler à une application, avec erreurs, logs, retry, API et qualité, elles deviennent pénibles à maintenir.</p>
+<p>Le quatrième risque est que Python éloigne l’équipe du métier. Plus la plateforme devient complexe, plus les personnes capables de la maintenir passent leur temps à la maintenir. Le projet data peut perdre son lien avec les questions business qui lui donnaient sa raison d’être.</p>
+<p>Le cinquième risque est propre à l’IA: produire vite des transformations fausses. Dans la data, l’échec spectaculaire est presque préférable à l’erreur silencieuse. Un pipeline qui tombe force l’équipe à agir. Un pipeline qui réussit en supprimant discrètement des lignes détruit la confiance sans prévenir.</p>
+<h3>À intégrer dans une pratique Data/AI</h3>
+<p>Une bonne pratique consiste à garder une règle simple: chaque outil doit être autorisé à faire ce qu’il fait le mieux, mais empêché de devenir tout le système. Excel pour explorer vite. Power BI pour partager et visualiser. SQL pour préparer et centraliser. Python pour orchestrer et connecter. IA pour accélérer sous contrôle.</p>
+<p>Dans les workflows, il faut surveiller les moments de bascule. Si une analyse Excel devient hebdomadaire, elle mérite probablement Power BI. Si un projet Power BI devient une source copiée par d’autres équipes, il mérite probablement un entrepôt SQL. Si une procédure stockée se remplit de logs, de retries et d’appels externes, elle mérite probablement Python. Si l’IA écrit des transformations, elles méritent des tests de conservation de lignes, des contrôles de totaux et une revue humaine.</p>
+<p>Les prompts utiles devraient suivre cette logique. Demander à l’IA “écris la requête” est trop pauvre. Mieux vaut demander: “Écris cette requête SQL, puis liste les risques de perte de lignes, les hypothèses de jointure, les contrôles à exécuter et les cas où le résultat pourrait être faux sans erreur technique.” Pour Python: “Génère la pipeline, ajoute du logging, propose des contrôles Great Expectations, et indique quelles erreurs doivent arrêter le job.” Pour Power BI: “Propose un modèle en étoile et explique quelles transformations doivent rester dans Power Query et lesquelles devraient être déplacées vers SQL si le volume augmente.”</p>
+<p>Cette manière de travailler garde l’IA à sa bonne place: un accélérateur de production et de réflexion, pas un substitut à la responsabilité data.</p>
+<h2>Formulations marquantes</h2>
+<p class="bullet">• Excel est un atelier formidable, mais un mauvais système de production.</p>
+<p class="bullet">• Le cauchemar commence le jour où le rapport ponctuel devient une routine hebdomadaire.</p>
+<p class="bullet">• Power BI enlève l’analyste du processus manuel, mais il ne doit pas devenir toute la plateforme data.</p>
+<p class="bullet">• Une préparation complexe cachée dans Power Query finit par produire plusieurs vérités concurrentes.</p>
+<p class="bullet">• SQL donne une colonne vertébrale à la donnée: couches, tables, vues, source commune.</p>
+<p class="bullet">• On ne remplace pas Power BI par SQL; on sépare les responsabilités.</p>
+<p class="bullet">• SQL est roi dans la base, mais il souffre dès que le travail sort des murs de la base.</p>
+<p class="bullet">• Python est la couche qui entoure SQL: API, fichiers, streaming, logs, qualité, orchestration.</p>
+<p class="bullet">• Les pipelines cassent tout le temps; faire comme s’ils ne casseront pas est déjà une erreur d’architecture.</p>
+<p class="bullet">• L’IA rend très rapide, mais la vitesse n’a aucune valeur si elle détruit la confiance.</p>
+<p class="bullet">• En data, l’erreur la plus dangereuse est celle qui ne fait aucun bruit.</p>
+<p class="bullet">• Un mauvais `INNER JOIN` peut produire un job vert et des chiffres faux.</p>
+<h2>À retenir</h2>
+<p>Excel: apprendre pour explorer, nettoyer et répondre vite à de petites questions.</p>
+<p>Power BI: apprendre pour automatiser les refreshs, construire des rapports interactifs, partager proprement les résultats.</p>
+<p>SQL: apprendre pour transformer les données au bon endroit, créer un entrepôt, construire une source unique de vérité.</p>
+<p>Python: apprendre pour orchestrer les pipelines, connecter les API et fichiers modernes, ajouter logs et qualité, faire de l’analytics avancée.</p>
+<p>IA: apprendre pour accélérer documentation, revue, génération de code et exploration, mais toujours avec tests et validation.</p>
+<p>Le vrai niveau professionnel n’est pas de choisir un camp. C’est de savoir quand un outil a atteint sa limite et de déplacer la responsabilité vers l’outil suivant avant que le succès du projet ne devienne son propre piège.</p>
+  <p class="source">Source vidéo : <a href="https://www.youtube.com/watch?v=BPvk339VqJg">https://www.youtube.com/watch?v=BPvk339VqJg</a></p>
+</main>
+</body>
+</html>
