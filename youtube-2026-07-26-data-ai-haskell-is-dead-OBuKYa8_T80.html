@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="The PrimeTime">
+  <meta name="keywords" content="youtube, data-ai">
+  <title>Haskell is Dead</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f7f4ed;
+      color: #171717;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.12em;
+      line-height: 1.68;
+    }
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 28px 72px;
+      background: #fffdf8;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: 2.05rem;
+      line-height: 1.12;
+      font-weight: 700;
+    }
+    h2 {
+      margin: 2.1rem 0 0.75rem;
+      font-size: 1.35rem;
+      line-height: 1.25;
+    }
+    h3 {
+      margin: 1.55rem 0 0.55rem;
+      font-size: 1.1rem;
+      line-height: 1.3;
+    }
+    p {
+      margin: 0 0 1rem;
+    }
+    .meta, .source, .bullet {
+      color: #555;
+      font-size: 0.94rem;
+      line-height: 1.48;
+    }
+    .bullet {
+      color: #222;
+      padding-left: 0.6rem;
+    }
+    .source {
+      margin-top: 2.4rem;
+      border-top: 1px solid #ddd6c8;
+      padding-top: 1rem;
+    }
+    a { color: #173f5f; }
+    @media (max-width: 640px) {
+      body { font-size: 1.12em; }
+      main { padding: 34px 18px 56px; }
+      h1 { font-size: 1.78rem; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <p class="meta">The PrimeTime · 2026-07-26 · tags: youtube, data-ai</p>
+  <h1>Haskell is Dead</h1>
+<p>Source: https://www.youtube.com/watch?v=OBuKYa8_T80 Chaîne: The PrimeTime Catégorie: data-ai Sujet: Data/AI général</p>
+<h2>Chapeau</h2>
+<p>Haskell est mort, dit l’ouverture, parce qu’un signal difficile à ignorer vient de tomber : après sept ans en production, Scarf, l’une des grandes entreprises associées à Haskell, a décidé de s’en éloigner. Le motif n’est pas un rejet esthétique du langage. Le problème vient de la friction réelle : compilation, outillage, écosystème, angles coupants que l’équipe connaissait, supportait, contournait. Pendant longtemps, cette friction restait acceptable parce que les garanties du langage, notamment à la compilation, compensaient le coût.</p>
+<p>Puis l’IA a déplacé le calcul. Non pas parce qu’elle rendrait les types inutiles, mais parce qu’elle ajoute un troisième lieu où les erreurs peuvent être interceptées : le moment où le code est généré. Avant, on raisonnait entre compile time et runtime. Désormais, il faut compter avec generation time. Et cette nuance suffit à changer la valeur relative d’un langage très exigeant.</p>
+<h2>Thèses principales</h2>
+<p class="bullet">• Scarf quitte Haskell après sept ans de production, malgré une équipe qui connaissait profondément le langage et ses outils.</p>
+<p class="bullet">• Le coût central n’est pas Haskell en soi, mais la friction cumulée de compilation et d’écosystème.</p>
+<p class="bullet">• L’IA modifie le compromis historique entre sécurité à la compilation et vélocité de développement.</p>
+<p class="bullet">• Les erreurs ne se répartissent plus seulement entre compilation et exécution : une partie peut être évitée au moment où le modèle génère le code.</p>
+<p class="bullet">• Plus les modèles progressent, plus la valeur marginale de « tout attraper » à la compilation doit être réévaluée.</p>
+<p class="bullet">• La position est plus subtile qu’un simple « Haskell est mauvais » : elle attaque le rapport coût/bénéfice dans un monde où l’assistance IA change le workflow.</p>
+<h2>Article long format</h2>
+<h3>Le signal Scarf : quand une entreprise Haskell décroche</h3>
+<p>La vidéo commence sans détour : « Haskell is dead ». La formule claque volontairement trop fort, comme souvent chez The PrimeTime, mais elle part d’un cas concret. Scarf, présenté comme l’une des grandes entreprises Haskell, a fini par quitter le langage après sept ans d’usage en production. Sept ans, dans ce contexte, changent tout. Il ne s’agit pas d’une équipe qui aurait essayé Haskell pendant quelques semaines avant de découvrir que la courbe d’apprentissage pique. Scarf connaissait le terrain. L’équipe maîtrisait le langage, les outils, les pièges. Elle savait où se trouvaient les bords tranchants.</p>
+<p>Cette précision rend la décision plus lourde. Quand une équipe inexpérimentée abandonne Haskell, on peut toujours invoquer l’incompréhension, le manque de discipline, la difficulté d’entrée. Quand une équipe qui vit avec le langage depuis des années conclut que le compromis ne tient plus, l’argument change de nature. Le sujet devient industriel. Il concerne le coût quotidien de produire, compiler, maintenir, faire évoluer, intégrer, recruter peut-être, mais surtout avancer dans un écosystème dont la puissance ne supprime pas la rugosité.</p>
+<p>Le problème nommé est double : compilation et friction d’écosystème. Deux mots très pratiques, presque ingrats, loin des grands débats sur la pureté fonctionnelle. La compilation pèse parce qu’elle ralentit le cycle de feedback. L’écosystème frotte parce qu’un langage ne vit jamais seul : bibliothèques, tooling, intégrations, compatibilités, documentation, chemins déjà tracés par la communauté. Une équipe experte peut vivre longtemps avec ces coûts. Elle les anticipe, les contourne, les internalise. Mais vivre avec une friction n’est pas la même chose que la justifier indéfiniment.</p>
+<h3>La sécurité à la compilation perd son monopole symbolique</h3>
+<p>Haskell a longtemps tiré une part de son prestige d’une promesse forte : déplacer les erreurs vers la compilation. Mieux vaut que le compilateur refuse un programme incorrect avant qu’il ne casse en production. Cette philosophie a façonné tout un imaginaire de programmation : construire des systèmes où des classes entières de bugs deviennent impossibles ou très difficiles à exprimer. Dans cet univers, la compilation n’est pas une formalité. Elle devient un partenaire intellectuel, parfois exigeant, parfois exaspérant, mais capable de protéger le développeur contre ses propres raccourcis.</p>
+<p>La vidéo reprend précisément ce cadre : historiquement, on pensait les erreurs en deux lieux. Soit elles sont captées à la compilation, soit elles surgissent à l’exécution. Toute la valeur de langages comme Haskell se comprend dans cette opposition. Payer plus cher pendant l’écriture et la compilation peut se défendre si cela réduit fortement les surprises au runtime. Le développeur souffre avant, l’utilisateur souffre moins après.</p>
+<p>L’arrivée de l’IA ajoute un troisième lieu : le moment de génération du code. La formule est simple, mais elle déplace le centre de gravité. Si un modèle peut souvent éviter une erreur avant même que le compilateur voie le code, la hiérarchie classique des garanties bouge. Le compilateur reste utile, mais il n’est plus le seul rempart sérieux entre l’intention et le bug. Le workflow devient triangulaire : génération par modèle, validation par outils, exécution par système réel.</p>
+<p>C’est là que la prise de position devient plus intéressante qu’un procès banal contre Haskell. L’argument n’est pas que les compilateurs ne servent plus. Il dit que leur valeur relative change quand une autre couche commence à absorber une partie du travail de prévention.</p>
+<h3>Generation time : le nouveau lieu de la correction</h3>
+<p>Le terme décisif est « code generation time ». Avant l’IA générative, cette expression aurait sonné comme un détail de métaprogrammation ou d’outillage spécialisé. Dans le contexte actuel, elle désigne le moment où le développeur demande à un modèle de produire, modifier ou compléter du code. Ce moment n’est pas neutre. Il devient un espace de correction anticipée.</p>
+<p>Un modèle performant ne se contente pas toujours de cracher une syntaxe approximative. Il peut connaître des patterns idiomatiques, éviter certaines erreurs communes, choisir une bibliothèque plus attendue, produire une structure plus conventionnelle, respecter une interface donnée, réparer un morceau de code avant qu’il ne soit soumis à la chaîne classique. Même si cette couche reste imparfaite, elle modifie le coût d’un langage. Le bénéfice de garanties fortes à la compilation dépend du volume d’erreurs qui arrivent jusque-là. Si une partie des erreurs disparaît plus tôt, la compilation reste précieuse, mais elle cesse d’être l’unique point noble de prévention.</p>
+<p>Pour une équipe, ce déplacement a des conséquences très concrètes. Les langages qui se combinaient mal avec l’outillage courant pouvaient justifier leur friction par un niveau de sûreté supérieur. Mais si le quotidien du développement incorpore de plus en plus des assistants capables de produire du code correct dans des écosystèmes plus larges, plus documentés, plus fréquentés, alors l’arbitrage se durcit. Un langage très sûr mais plus frictionnel doit désormais affronter des langages peut-être moins stricts, mais mieux servis par les modèles, les bibliothèques, les workflows et la masse d’exemples disponibles.</p>
+<p>La vidéo ne développe pas tous ces cas, mais l’implication est nette : l’IA ne se contente pas d’accélérer l’écriture. Elle redistribue la valeur entre langage, compilateur, outillage et écosystème.</p>
+<h3>Haskell face au coût total de développement</h3>
+<p>Le cœur du sujet est le coût total. Une technologie ne se juge pas seulement à sa beauté interne. Elle se juge à ce qu’elle coûte dans le flux complet : écrire, compiler, corriger, intégrer, déployer, maintenir. Scarf semblait capable de supporter Haskell pendant longtemps parce que l’équipe connaissait suffisamment le langage pour ne pas se perdre à chaque étape. Mais connaître un outil profondément ne supprime pas le temps qu’il réclame. Cela permet seulement de mieux payer le prix.</p>
+<p>La friction de compilation est particulièrement sensible dans un monde accéléré par l’IA. Si un assistant peut proposer rapidement une modification, mais que la boucle de validation reste lourde, la vitesse promise se casse contre le tooling. Le modèle réduit le coût de production initiale, puis le langage et l’écosystème imposent leur propre cadence. Plus le premier coût baisse, plus le second devient visible. Ce qui paraissait acceptable dans une économie de développement manuelle peut devenir disproportionné dans une économie assistée.</p>
+<p>Le même raisonnement touche l’écosystème. Les modèles sont puissants quand ils baignent dans beaucoup d’exemples, de conventions, de bibliothèques communes, de problèmes déjà résolus. Un écosystème moins fluide ou moins dominant peut devenir plus difficile à servir par IA. Non parce que le langage serait intellectuellement inférieur, mais parce que l’outillage moderne favorise les chemins très fréquentés. L’IA amplifie les avantages des environnements déjà riches en données, en patterns et en usages.</p>
+<p>À ce niveau, « Haskell is dead » signifie moins « plus personne ne devrait écrire Haskell » que « le vieux contrat de Haskell est attaqué ». Pendant des années, le contrat était : acceptez plus de rigueur, plus d’effort, plus de compilation, et vous obtiendrez plus de garanties. L’IA introduit une concurrence latérale : acceptez un langage moins idéal sur le papier, mais bénéficiez d’un flux de génération, d’outillage et d’écosystème plus rapide, avec une partie des erreurs évitées avant compilation.</p>
+<h3>Une prise de position étonnamment nuancée</h3>
+<p>The PrimeTime souligne sa surprise : ce n’est pas forcément l’endroit où il attendait l’IA. On aurait pu croire que l’argument contre Haskell porterait sur la popularité, le recrutement, la complexité, ou l’éternelle opposition entre pureté théorique et pragmatisme. Ici, l’IA intervient dans la théorie même des erreurs. Elle change le moment où le code peut être corrigé.</p>
+<p>C’est pour cela que la formule finale frappe : c’est « la prise la plus nuancée » qu’il ait vue de la part d’une personne Haskell. La vulgarité de l’expression originale donne le ton : il y a de l’étonnement, presque du respect. L’argument n’est pas paresseux. Il ne dit pas que les types sont dépassés, que la compilation ne vaut rien, que les modèles remplacent la discipline. Il dit que la carte des coûts a changé.</p>
+<p>Cette nuance mérite d’être gardée, parce qu’elle évite deux caricatures. D’un côté, les défenseurs des langages fortement typés pourraient répondre que l’IA hallucine, que seul le compilateur donne une garantie formelle, que les modèles n’ont aucune autorité. C’est vrai à un certain niveau, mais incomplet dans le workflow réel. De l’autre, les enthousiastes de l’IA pourraient prétendre que les assistants rendent les langages rigoureux inutiles. La vidéo ne va pas là. Elle pointe une évolution plus précise : quand une nouvelle couche de génération réduit certaines erreurs en amont, la prime accordée aux garanties de compilation doit être recalculée.</p>
+<p>Pour une équipe data, IA ou software, l’enseignement est opérationnel. Le choix d’un langage ne peut plus être séparé de la manière dont les modèles assistent réellement le développement. Il faut regarder la boucle complète : qualité des suggestions, vitesse de compilation, clarté des erreurs, richesse des bibliothèques, compatibilité avec les assistants, coût d’intégration, coût mental pour l’équipe. La question n’est plus seulement « quel langage attrape le plus d’erreurs ? » mais « où nos erreurs sont-elles attrapées, à quel prix, et avec quelle vitesse de retour ? »</p>
+<h3>Le nouveau compromis pour les équipes techniques</h3>
+<p>La vidéo tient dans une minute, mais elle condense un changement plus large dans la décision technique. Les équipes doivent désormais traiter l’IA comme une partie de l’environnement de programmation, pas comme un gadget posé à côté de l’éditeur. Si le modèle participe à la conception, à la génération, à la correction et parfois à la refactorisation, alors les qualités d’un langage se mesurent aussi à sa compatibilité avec cette couche.</p>
+<p>Un langage peut être excellent formellement et moins bon dans une boucle assistée par IA. Un autre peut être moins protecteur à la compilation, mais beaucoup plus rapide à explorer, mieux couvert par les modèles, plus facile à intégrer dans des workflows existants. Le bon choix dépend alors de la structure des erreurs que l’équipe rencontre. Si les erreurs les plus coûteuses sont des erreurs de domaine, de logique métier, d’architecture ou d’intégration, le compilateur ne les éliminera pas toutes. Si les modèles aident surtout à écrire du code standard, à éviter les fautes idiomatiques et à naviguer l’écosystème, leur valeur sera plus forte dans les langages où le corpus et les bibliothèques sont abondants.</p>
+<p>Scarf devient donc un cas exemplaire non parce qu’il enterrerait Haskell à lui seul, mais parce qu’il montre une entreprise expérimentée en train de réviser ses compromis. L’argument ne repose pas sur l’incompétence, ni sur la mode, ni sur une fascination naïve pour l’IA. Il repose sur une observation de workflow : quand le lieu de correction se déplace, les anciens coûts changent de poids.</p>
+<p>Haskell n’est peut-être pas mort au sens littéral. Mais l’économie qui le protégeait s’est fissurée. Dans un monde où l’IA intervient avant le compilateur, la rigueur ne suffit plus à elle seule à justifier la friction. Il faut que le langage, l’outillage et l’écosystème gagnent aussi dans la boucle de production réelle. C’est cette conclusion, sèche et pratique, qui rend la vidéo plus forte que son titre.</p>
+<h2>Formulations marquantes</h2>
+<p class="bullet">• « Haskell is dead because look at this. »</p>
+<p class="bullet">• « After seven years in production, Scarf has reluctantly moved away from Haskell. »</p>
+<p class="bullet">• « Compilation and ecosystem friction. »</p>
+<p class="bullet">• « We knew where the sharp edges were, and we mostly lived with it. »</p>
+<p class="bullet">• « Then AI changed the trade-offs. »</p>
+<p class="bullet">• « Compile time, runtime, and now code generation time. »</p>
+<p class="bullet">• « The model can often avoid a mistake before the compiler even sees the code. »</p>
+<p class="bullet">• « The relative value of catching every possible issue at compile time changes. »</p>
+<p class="bullet">• « La prise de position la plus nuancée qu’on puisse attendre dans ce débat Haskell. »</p>
+<h2>À retenir</h2>
+<p>Le cas Scarf ne dit pas seulement qu’une entreprise quitte Haskell. Il signale que l’IA change le calcul économique des langages : si une partie des erreurs est évitée dès la génération du code, la valeur des garanties de compilation reste réelle, mais elle doit être comparée à la friction complète du workflow.</p>
+<p>Pour une équipe technique, le bon arbitrage ne se limite plus à choisir entre langages stricts et langages permissifs. Il faut mesurer la boucle entière : génération IA, compilation, tooling, écosystème, vitesse de retour, coût d’intégration et types d’erreurs réellement rencontrées. Dans ce cadre, Haskell garde ses forces, mais son ancien argument central devient plus difficile à vendre quand l’IA réduit le prix d’autres environnements.</p>
+  <p class="source">Source vidéo : <a href="https://www.youtube.com/watch?v=OBuKYa8_T80">https://www.youtube.com/watch?v=OBuKYa8_T80</a></p>
+</main>
+</body>
+</html>
